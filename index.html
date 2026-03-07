@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aikron &mdash; Next-Generation Digital Products</title>
+<meta name="description" content="Aikron &mdash; Full-stack digital solutions provider specializing in React, Flutter, Java, AI/ML and modern cloud architectures." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Literata:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">Aikron</div>
+    <div class="loader-bar-bg"><div class="loader-bar"></div></div>
+  </div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#portfolio" onclick="closeMobile()">Work</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">Aik<span>ron</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-outline" style="padding:10px 20px; font-size:14px;">Contact Us</a>
+        <a href="#contact" class="btn btn-primary" style="padding:10px 20px; font-size:14px;">Start Project &rarr;</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="heroCanvas"></canvas>
+
+  <!-- Animated spotlight beam -->
+  <div class="hero-beam" aria-hidden="true"></div>
+
+  <!-- Pulsing glow rings -->
+  <div class="hero-ring hero-ring-1" aria-hidden="true"></div>
+  <div class="hero-ring hero-ring-2" aria-hidden="true"></div>
+
+  <div class="hero-glow glow-1" id="glow1"></div>
+  <div class="hero-glow glow-2" id="glow2"></div>
+  <div class="hero-glow glow-3" id="glow3"></div>
+
+  <!-- Floating tech chips -->
+
+
+  <div class="container" style="position:relative;z-index:2;width:100%;">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-dot"></div>
+        Full-Stack Digital Solutions Provider
+      </div>
+      <h1 class="hero-title">
+        Building <span class="grad-text"><span id="typewriter">Next-Generation</span></span><br>Digital Products
+      </h1>
+      <p class="hero-sub">
+        We engineer scalable, high-performance digital solutions — from concept to deployment. Partnering with startups and enterprises to turn bold ideas into world-class products.
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">Start Your Project &rarr;</a>
+        <a href="#portfolio" class="btn btn-outline">View Our Work</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num" data-count="120">0</div><div class="stat-label">Projects Delivered</div></div>
+        <div><div class="stat-num" data-count="98">0</div><div class="stat-label">Client Satisfaction</div></div>
+        <div><div class="stat-num" data-count="5">0</div><div class="stat-label">Years Experience</div></div>
+        <div><div class="stat-num" data-count="40">0</div><div class="stat-label">Expert Engineers</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK MARQUEE -->
+<div class="techloop-wrap" aria-label="Technologies we use">
+  <div class="techloop-track">
+
+    <!-- Set A -->
+    <div class="tl-item"><div class="tl-icon tl-react">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.5" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none" transform="rotate(120 12 12)"/></svg>
+    </div><span>React</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-nextjs">
+      <svg viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#000"/><path d="M4 20 L13 7 L13 20" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M13 7 L20 20" stroke="url(#ng)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="ng" x1="13" y1="7" x2="20" y2="20" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#fff"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/></linearGradient></defs></svg>
+    </div><span>Next.js</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-flutter">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M3.5 13.5 L13.5 3.5 H18.5 L8.5 13.5 L18.5 23.5 H13.5 L8.5 18.5 L3.5 13.5Z" fill="#54C5F8"/><path d="M8.5 13.5 L13.5 18.5 L18.5 13.5 L13.5 8.5Z" fill="#01579B" opacity="0.5"/></svg>
+    </div><span>Flutter</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-python">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.5 2 7 3.5 7 5v2h5v1H5.5C3.5 8 2 9.5 2 12s1.5 4 3.5 4H7v-2.5c0-1.5 1-2.5 2.5-2.5h5c1.5 0 2.5-1 2.5-2.5V5c0-1.5-1.5-3-5-3zM10 4.5a1 1 0 110 2 1 1 0 010-2z" fill="#3776AB"/><path d="M12 22c3.5 0 5-1.5 5-3v-2h-5v-1h6.5c2 0 3.5-1.5 3.5-4s-1.5-4-3.5-4H17v2.5c0 1.5-1 2.5-2.5 2.5h-5c-1.5 0-2.5 1-2.5 2.5V19c0 1.5 1.5 3 5 3zM14 19.5a1 1 0 110-2 1 1 0 010 2z" fill="#FFD43B"/></svg>
+    </div><span>Python</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-java">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M9 18s-1 .3-1.6.5c0 0 1-.3 2.6-.4C11.5 18 13 18.3 14 19c0 0-1.5-.8-5-1z" fill="#5382A1"/><path d="M8.8 16.7s-1.1.5-1.8.7c0 0 1.1-.4 2.8-.4 1.5 0 3 .4 4 1.1 0 0-1.7-.9-5-1.4z" fill="#5382A1"/><path d="M12 14.7c2.2-.9 3.8-2.1 3.8-2.1s-5.8 1.1-8.6.3C5 12.1 5 11 8 9.5c3.3-1.6 5-3.5 5-3.5S7 7.5 5.5 9.8c-1.5 2.2.5 3.8 1.5 4.2 1 .4 3 .9 5 .7z" fill="#E76F00"/><path d="M8.5 20.4S7 20.8 5.8 21.6c0 0 1.4-.5 3.5-.5 1.9 0 4 .5 5.2 1.4 0 0-2-.9-6-2.1z" fill="#5382A1"/><path d="M15 16.8c.5-.4.8-1 .8-1.5 0-1.3-.8-2-3.8-2.8 0 0 2.5 1 2.5 2.3 0 .7-.4 1.3-1.5 1.8-1.1.5-2.8.8-4.5.6 0 0 2.7.4 6.5-.4z" fill="#5382A1"/></svg>
+    </div><span>Java</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-node">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v10l9 5 9-5V7L12 2z" fill="#339933" opacity="0.15" stroke="#339933" stroke-width="1.5"/><path d="M12 6v12M7 8.5l5 3 5-3M7 15.5l5-3 5 3" stroke="#339933" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div><span>Node.js</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-aws">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M7 12.5c0-2.8 2.2-5 5-5s5 2.2 5 5" stroke="#FF9900" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M4 17.5h16M6 17.5L4 19.5M18 17.5l2 2M12 7.5V5" stroke="#FF9900" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12.5" r="2" fill="#FF9900" opacity="0.3"/></svg>
+    </div><span>AWS</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-tf">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 6l8-4 8 4v12l-8 4-8-4V6z" fill="#FF6F00" opacity="0.15" stroke="#FF6F00" stroke-width="1.5"/><path d="M12 2v20M4 6l8 4 8-4" stroke="#FF6F00" stroke-width="1.3" stroke-linecap="round"/></svg>
+    </div><span>TensorFlow</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-docker">
+      <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="11" width="20" height="7" rx="3" fill="#2496ED" opacity="0.2" stroke="#2496ED" stroke-width="1.5"/><rect x="4" y="7" width="3" height="3" rx="0.5" fill="#2496ED"/><rect x="8" y="7" width="3" height="3" rx="0.5" fill="#2496ED"/><rect x="12" y="7" width="3" height="3" rx="0.5" fill="#2496ED"/><rect x="8" y="11" width="3" height="3" rx="0.5" fill="#2496ED"/><rect x="12" y="11" width="3" height="3" rx="0.5" fill="#2496ED"/><path d="M20 13c1-1 2.5-.5 2.5 1" stroke="#2496ED" stroke-width="1.3" stroke-linecap="round"/></svg>
+    </div><span>Docker</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-ts">
+      <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" fill="#3178C6" opacity="0.15" stroke="#3178C6" stroke-width="1.5"/><path d="M7 9h10M12 9v10" stroke="#3178C6" stroke-width="1.8" stroke-linecap="round"/><path d="M15 15c0-1.5-1-2-2-2s-2 .5-2 1.5 1 1.5 2 2 2 1 2 2-1 1.5-2 1.5-2-.5-2-1.5" stroke="#3178C6" stroke-width="1.4" stroke-linecap="round"/></svg>
+    </div><span>TypeScript</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-gcp">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 4l6 4v8l-6 4-6-4V8l6-4z" fill="none" stroke="#4285F4" stroke-width="1.5"/><path d="M6 8l6 4 6-4" stroke="#EA4335" stroke-width="1.3" stroke-linecap="round"/><path d="M12 12v8" stroke="#34A853" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div><span>GCP</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-figma">
+      <svg viewBox="0 0 24 24" fill="none"><rect x="7" y="2" width="6" height="6" rx="2" fill="#F24E1E" opacity="0.7"/><rect x="7" y="9" width="6" height="6" rx="2" fill="#FF7262" opacity="0.7"/><rect x="7" y="16" width="6" height="6" rx="2" fill="#0ACF83" opacity="0.7"/><rect x="13" y="2" width="4" height="6" rx="2" fill="#A259FF" opacity="0.8"/><circle cx="15" cy="12" r="3" fill="#1ABCFE" opacity="0.8"/></svg>
+    </div><span>Figma</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-pg">
+      <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="7" rx="7" ry="3.5" stroke="#336791" stroke-width="1.5" fill="#336791" fill-opacity="0.1"/><path d="M5 7v6c0 2 3 3.5 7 3.5s7-1.5 7-3.5V7" stroke="#336791" stroke-width="1.5"/><path d="M5 10c0 2 3 3.5 7 3.5s7-1.5 7-3.5" stroke="#336791" stroke-width="1" stroke-dasharray="2 2"/></svg>
+    </div><span>PostgreSQL</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-spring">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 18c0 0 4-8 12-12" stroke="#6DB33F" stroke-width="2" stroke-linecap="round"/><path d="M6 12c0 0 2-4 8-6" stroke="#6DB33F" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><circle cx="19" cy="5" r="2" fill="#6DB33F" opacity="0.4"/></svg>
+    </div><span>Spring Boot</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-mongo">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-3.5 5-4 8.5-1 11.5" stroke="#47A248" stroke-width="2" stroke-linecap="round"/><path d="M12 3c3.5 5 4 8.5 1 11.5" stroke="#47A248" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><path d="M12 14.5V21" stroke="#47A248" stroke-width="2" stroke-linecap="round"/></svg>
+    </div><span>MongoDB</span></div>
+
+    <div class="tl-item"><div class="tl-icon tl-openai">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4.5 4.5 0 013.9 6.75A4.5 4.5 0 0118 12a4.5 4.5 0 01-3.9 4.45 4.5 4.5 0 01-4.2 0A4.5 4.5 0 016 12a4.5 4.5 0 012.1-3.25A4.5 4.5 0 0112 2z" stroke="#10a37f" stroke-width="1.4" fill="#10a37f" fill-opacity="0.1"/><circle cx="12" cy="12" r="2.5" fill="#10a37f" opacity="0.4"/></svg>
+    </div><span>OpenAI</span></div>
+
+    <!-- Set B — exact duplicate for seamless loop -->
+    <div class="tl-item"><div class="tl-icon tl-react"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.5" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none" transform="rotate(120 12 12)"/></svg></div><span>React</span></div>
+    <div class="tl-item"><div class="tl-icon tl-nextjs"><svg viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#000"/><path d="M4 20 L13 7 L13 20" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M13 7 L20 20" stroke="url(#ng2)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="ng2" x1="13" y1="7" x2="20" y2="20" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#fff"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/></linearGradient></defs></svg></div><span>Next.js</span></div>
+    <div class="tl-item"><div class="tl-icon tl-flutter"><svg viewBox="0 0 24 24" fill="none"><path d="M3.5 13.5 L13.5 3.5 H18.5 L8.5 13.5 L18.5 23.5 H13.5 L8.5 18.5 L3.5 13.5Z" fill="#54C5F8"/><path d="M8.5 13.5 L13.5 18.5 L18.5 13.5 L13.5 8.5Z" fill="#01579B" opacity="0.5"/></svg></div><span>Flutter</span></div>
+    <div class="tl-item"><div class="tl-icon tl-python"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.5 2 7 3.5 7 5v2h5v1H5.5C3.5 8 2 9.5 2 12s1.5 4 3.5 4H7v-2.5c0-1.5 1-2.5 2.5-2.5h5c1.5 0 2.5-1 2.5-2.5V5c0-1.5-1.5-3-5-3zM10 4.5a1 1 0 110 2 1 1 0 010-2z" fill="#3776AB"/><path d="M12 22c3.5 0 5-1.5 5-3v-2h-5v-1h6.5c2 0 3.5-1.5 3.5-4s-1.5-4-3.5-4H17v2.5c0 1.5-1 2.5-2.5 2.5h-5c-1.5 0-2.5 1-2.5 2.5V19c0 1.5 1.5 3 5 3zM14 19.5a1 1 0 110-2 1 1 0 010 2z" fill="#FFD43B"/></svg></div><span>Python</span></div>
+    <div class="tl-item"><div class="tl-icon tl-java"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18s-1 .3-1.6.5c0 0 1-.3 2.6-.4C11.5 18 13 18.3 14 19c0 0-1.5-.8-5-1z" fill="#5382A1"/><path d="M8.8 16.7s-1.1.5-1.8.7c0 0 1.1-.4 2.8-.4 1.5 0 3 .4 4 1.1 0 0-1.7-.9-5-1.4z" fill="#5382A1"/><path d="M12 14.7c2.2-.9 3.8-2.1 3.8-2.1s-5.8 1.1-8.6.3C5 12.1 5 11 8 9.5c3.3-1.6 5-3.5 5-3.5S7 7.5 5.5 9.8c-1.5 2.2.5 3.8 1.5 4.2 1 .4 3 .9 5 .7z" fill="#E76F00"/><path d="M8.5 20.4S7 20.8 5.8 21.6c0 0 1.4-.5 3.5-.5 1.9 0 4 .5 5.2 1.4 0 0-2-.9-6-2.1z" fill="#5382A1"/><path d="M15 16.8c.5-.4.8-1 .8-1.5 0-1.3-.8-2-3.8-2.8 0 0 2.5 1 2.5 2.3 0 .7-.4 1.3-1.5 1.8-1.1.5-2.8.8-4.5.6 0 0 2.7.4 6.5-.4z" fill="#5382A1"/></svg></div><span>Java</span></div>
+    <div class="tl-item"><div class="tl-icon tl-node"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v10l9 5 9-5V7L12 2z" fill="#339933" opacity="0.15" stroke="#339933" stroke-width="1.5"/><path d="M12 6v12M7 8.5l5 3 5-3M7 15.5l5-3 5 3" stroke="#339933" stroke-width="1.5" stroke-linecap="round"/></svg></div><span>Node.js</span></div>
+    <div class="tl-item"><div class="tl-icon tl-aws"><svg viewBox="0 0 24 24" fill="none"><path d="M7 12.5c0-2.8 2.2-5 5-5s5 2.2 5 5" stroke="#FF9900" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M4 17.5h16M6 17.5L4 19.5M18 17.5l2 2M12 7.5V5" stroke="#FF9900" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12.5" r="2" fill="#FF9900" opacity="0.3"/></svg></div><span>AWS</span></div>
+    <div class="tl-item"><div class="tl-icon tl-tf"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6l8-4 8 4v12l-8 4-8-4V6z" fill="#FF6F00" opacity="0.15" stroke="#FF6F00" stroke-width="1.5"/><path d="M12 2v20M4 6l8 4 8-4" stroke="#FF6F00" stroke-width="1.3" stroke-linecap="round"/></svg></div><span>TensorFlow</span></div>
+    <div class="tl-item"><div class="tl-icon tl-docker"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="11" width="20" height="7" rx="3" fill="#2496ED" opacity="0.2" stroke="#2496ED" stroke-width="1.5"/><rect x="4" y="7" width="3" height="3" rx="0.5" fill="#2496ED"/><rect x="8" y="7" width="3" height="3" rx="0.5" fill="#2496ED"/><rect x="12" y="7" width="3" height="3" rx="0.5" fill="#2496ED"/><rect x="8" y="11" width="3" height="3" rx="0.5" fill="#2496ED"/><rect x="12" y="11" width="3" height="3" rx="0.5" fill="#2496ED"/><path d="M20 13c1-1 2.5-.5 2.5 1" stroke="#2496ED" stroke-width="1.3" stroke-linecap="round"/></svg></div><span>Docker</span></div>
+    <div class="tl-item"><div class="tl-icon tl-ts"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" fill="#3178C6" opacity="0.15" stroke="#3178C6" stroke-width="1.5"/><path d="M7 9h10M12 9v10" stroke="#3178C6" stroke-width="1.8" stroke-linecap="round"/><path d="M15 15c0-1.5-1-2-2-2s-2 .5-2 1.5 1 1.5 2 2 2 1 2 2-1 1.5-2 1.5-2-.5-2-1.5" stroke="#3178C6" stroke-width="1.4" stroke-linecap="round"/></svg></div><span>TypeScript</span></div>
+    <div class="tl-item"><div class="tl-icon tl-gcp"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4l6 4v8l-6 4-6-4V8l6-4z" fill="none" stroke="#4285F4" stroke-width="1.5"/><path d="M6 8l6 4 6-4" stroke="#EA4335" stroke-width="1.3" stroke-linecap="round"/><path d="M12 12v8" stroke="#34A853" stroke-width="1.5" stroke-linecap="round"/></svg></div><span>GCP</span></div>
+    <div class="tl-item"><div class="tl-icon tl-figma"><svg viewBox="0 0 24 24" fill="none"><rect x="7" y="2" width="6" height="6" rx="2" fill="#F24E1E" opacity="0.7"/><rect x="7" y="9" width="6" height="6" rx="2" fill="#FF7262" opacity="0.7"/><rect x="7" y="16" width="6" height="6" rx="2" fill="#0ACF83" opacity="0.7"/><rect x="13" y="2" width="4" height="6" rx="2" fill="#A259FF" opacity="0.8"/><circle cx="15" cy="12" r="3" fill="#1ABCFE" opacity="0.8"/></svg></div><span>Figma</span></div>
+    <div class="tl-item"><div class="tl-icon tl-pg"><svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="7" rx="7" ry="3.5" stroke="#336791" stroke-width="1.5" fill="#336791" fill-opacity="0.1"/><path d="M5 7v6c0 2 3 3.5 7 3.5s7-1.5 7-3.5V7" stroke="#336791" stroke-width="1.5"/><path d="M5 10c0 2 3 3.5 7 3.5s7-1.5 7-3.5" stroke="#336791" stroke-width="1" stroke-dasharray="2 2"/></svg></div><span>PostgreSQL</span></div>
+    <div class="tl-item"><div class="tl-icon tl-spring"><svg viewBox="0 0 24 24" fill="none"><path d="M6 18c0 0 4-8 12-12" stroke="#6DB33F" stroke-width="2" stroke-linecap="round"/><path d="M6 12c0 0 2-4 8-6" stroke="#6DB33F" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><circle cx="19" cy="5" r="2" fill="#6DB33F" opacity="0.4"/></svg></div><span>Spring Boot</span></div>
+    <div class="tl-item"><div class="tl-icon tl-mongo"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-3.5 5-4 8.5-1 11.5" stroke="#47A248" stroke-width="2" stroke-linecap="round"/><path d="M12 3c3.5 5 4 8.5 1 11.5" stroke="#47A248" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><path d="M12 14.5V21" stroke="#47A248" stroke-width="2" stroke-linecap="round"/></svg></div><span>MongoDB</span></div>
+    <div class="tl-item"><div class="tl-icon tl-openai"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4.5 4.5 0 013.9 6.75A4.5 4.5 0 0118 12a4.5 4.5 0 01-3.9 4.45 4.5 4.5 0 01-4.2 0A4.5 4.5 0 016 12a4.5 4.5 0 012.1-3.25A4.5 4.5 0 0112 2z" stroke="#10a37f" stroke-width="1.4" fill="#10a37f" fill-opacity="0.1"/><circle cx="12" cy="12" r="2.5" fill="#10a37f" opacity="0.4"/></svg></div><span>OpenAI</span></div>
+
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="tag reveal">Our Story</div>
+        <h2 class="about-title reveal reveal-delay-1">We Build Products That <span class="grad-text">Scale</span></h2>
+        <p class="about-body reveal reveal-delay-2">Aikron was founded with a single conviction: technology should solve real problems beautifully. We are a team of engineers, designers, and strategists who believe that exceptional digital products require both technical mastery and creative vision.</p>
+        <p class="about-body reveal reveal-delay-2">From early-stage startup MVPs to enterprise-grade platforms, we bring the same relentless attention to performance, scalability, and user experience. Every line of code we write, every interface we craft, and every architecture we design is built to endure and evolve.</p>
+        <div class="about-values reveal reveal-delay-3">
+          <div class="value-chip"><div class="value-chip-dot" style="background:#4ade80"></div> Innovation First</div>
+          <div class="value-chip"><div class="value-chip-dot" style="background:#22c55e"></div> Scalable by Design</div>
+          <div class="value-chip"><div class="value-chip-dot" style="background:#a3e635"></div> Client-Centric</div>
+          <div class="value-chip"><div class="value-chip-dot" style="background:#86efac"></div> Agile Delivery</div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-card-main">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:20px;font-weight:600;">ACTIVE PROJECTS</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(74,222,128,0.06);border:1px solid rgba(74,222,128,0.15);border-radius:12px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:#4ade80;flex-shrink:0;box-shadow:0 0 8px rgba(74,222,128,0.6)"></div>
+              <div style="font-size:13px;font-weight:500;">AI-Powered SaaS Dashboard</div>
+              <div style="margin-left:auto;font-size:11px;color:var(--muted)">92%</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(74,222,128,0.04);border:1px solid rgba(74,222,128,0.1);border-radius:12px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:#22c55e;flex-shrink:0;box-shadow:0 0 8px rgba(34,197,94,0.6)"></div>
+              <div style="font-size:13px;font-weight:500;">Flutter E-commerce App</div>
+              <div style="margin-left:auto;font-size:11px;color:var(--muted)">68%</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;padding:12px;background:rgba(163,230,53,0.05);border:1px solid rgba(163,230,53,0.12);border-radius:12px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:#a3e635;flex-shrink:0;box-shadow:0 0 8px rgba(163,230,53,0.6)"></div>
+              <div style="font-size:13px;font-weight:500;">Fintech Web Platform</div>
+              <div style="margin-left:auto;font-size:11px;color:var(--muted)">45%</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-card-float">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--green);margin-bottom:14px;font-weight:600;">DELIVERY RATE</div>
+          <div style="font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--text);">98<span style="font-size:20px;color:var(--green)">%</span></div>
+          <div style="font-size:12px;color:var(--muted);margin-top:4px;">On-time delivery<br>across all projects</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section" style="background:#f4faf5;">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">What We Do</div>
+      <h2 class="section-title reveal reveal-delay-1">End-to-End <span class="grad-text">Digital Services</span></h2>
+      <p class="section-sub reveal reveal-delay-2">From ideation to post-launch, we cover every layer of your digital product journey.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(74,222,128,0.1)">&#127760;</div><div class="svc-name">Web Development</div><div class="svc-desc">High-performance web applications built with React, Next.js and modern architectures that scale effortlessly.</div></div>
+      <div class="service-card reveal reveal-delay-1"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(163,230,53,0.1)">&#128241;</div><div class="svc-name">Mobile App Development</div><div class="svc-desc">Cross-platform apps with Flutter and native iOS/Android that deliver pixel-perfect experiences on every device.</div></div>
+      <div class="service-card reveal reveal-delay-2"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(74,222,128,0.08)">&#129302;</div><div class="svc-name">AI / ML Solutions</div><div class="svc-desc">Intelligent systems powered by machine learning, deep learning, and large language models integrated into your product.</div></div>
+      <div class="service-card reveal reveal-delay-3"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(163,230,53,0.08)">&#127912;</div><div class="svc-name">UI/UX Design</div><div class="svc-desc">Research-driven design systems and prototypes in Figma that convert users and stand out in the market.</div></div>
+      <div class="service-card reveal"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(74,222,128,0.12)">&#9729;&#65039;</div><div class="svc-name">SaaS Product Development</div><div class="svc-desc">Full-featured SaaS platforms with subscription billing, multi-tenancy, and enterprise-grade infrastructure.</div></div>
+      <div class="service-card reveal reveal-delay-1"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(74,222,128,0.06)">&#128640;</div><div class="svc-name">Startup MVP Development</div><div class="svc-desc">Rapid MVP delivery in 6&ndash;10 weeks so you can validate your idea with real users and real data, fast.</div></div>
+      <div class="service-card reveal reveal-delay-2"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(74,222,128,0.1)">&#9881;&#65039;</div><div class="svc-name">Cloud &amp; Backend Systems</div><div class="svc-desc">Robust Java/Spring Boot and Node.js backends with cloud infrastructure designed for resilience at scale.</div></div>
+      <div class="service-card reveal reveal-delay-3"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(163,230,53,0.1)">&#9889;</div><div class="svc-name">Automation Solutions</div><div class="svc-desc">Workflow automation, data pipelines, and intelligent bots that eliminate repetitive processes and multiply productivity.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="section mesh-bg">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">How We Work</div>
+      <h2 class="section-title reveal reveal-delay-1">Our <span class="grad-text">Proven Process</span></h2>
+      <p class="section-sub reveal reveal-delay-2">A structured, transparent workflow that ensures your project is delivered on time and exceeds expectations.</p>
+    </div>
+    <div class="process-track">
+      <div class="process-step reveal"><div class="step-num">01</div><div class="step-title">Discovery</div><div class="step-desc">Deep dive into your goals, users, and technical requirements to build a solid foundation.</div></div>
+      <div class="process-step reveal reveal-delay-1"><div class="step-num">02</div><div class="step-title">Design &amp; Architecture</div><div class="step-desc">System architecture, UI/UX wireframes, and technical specifications aligned with your vision.</div></div>
+      <div class="process-step reveal reveal-delay-2"><div class="step-num">03</div><div class="step-title">Development</div><div class="step-desc">Agile sprints with weekly demos, code reviews, and continuous integration for rapid, quality delivery.</div></div>
+      <div class="process-step reveal reveal-delay-3"><div class="step-num">04</div><div class="step-title">QA &amp; Optimization</div><div class="step-desc">Rigorous testing, performance optimization, security audits, and real-device validation.</div></div>
+      <div class="process-step reveal reveal-delay-4"><div class="step-num">05</div><div class="step-title">Launch &amp; Scale</div><div class="step-desc">Zero-downtime deployment, monitoring, and ongoing support as your product grows.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section portfolio-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">Our Work</div>
+      <h2 class="section-title reveal reveal-delay-1">Featured <span class="grad-text">Case Studies</span></h2>
+      <p class="section-sub reveal reveal-delay-2">A selection of projects that showcase our technical depth and design excellence.</p>
+    </div>
+  </div>
+
+  <!-- Stacked scroll cards -->
+  <div class="cs-stack" id="csStack">
+
+    <div class="cs-panel" style="--accent:#6366f1; --accent-dim:rgba(99,102,241,0.12);">
+      <div class="cs-panel-inner">
+        <div class="cs-panel-left">
+          <span class="cs-panel-tag">AI Platform &nbsp;·&nbsp; 01</span>
+          <h3 class="cs-panel-title">Sentient Analytics Platform.</h3>
+          <p class="cs-panel-desc">Real-time ML analytics dashboard with predictive modeling, anomaly detection, and natural language querying for enterprise data teams at scale.</p>
+          <div class="cs-panel-tags"><span>React</span><span>Python</span><span>TensorFlow</span><span>AWS</span></div>
+          <a href="#contact" class="cs-panel-cta">View Case Study &#8599;</a>
+        </div>
+        <div class="cs-panel-right">
+          <div class="cs-mock-card" style="background:linear-gradient(145deg,#0f1629,#1a0a2e)">
+            <div class="cs-mock-overlay" style="background:linear-gradient(135deg,rgba(99,102,241,0.3),rgba(139,92,246,0.2))"></div>
+            <div class="cs-mock-topbar"><span></span><span></span><span></span></div>
+            <div class="cs-mock-head" style="color:#a5b4fc">AI Platform</div>
+            <div class="cs-mock-sub">Sentient Analytics</div>
+            <div class="cs-mock-bars">
+              <div class="cs-bar" style="height:45%;--bc:rgba(99,102,241,0.6)"></div>
+              <div class="cs-bar" style="height:70%;--bc:rgba(139,92,246,0.7)"></div>
+              <div class="cs-bar" style="height:55%;--bc:rgba(99,102,241,0.5)"></div>
+              <div class="cs-bar" style="height:85%;--bc:rgba(165,180,252,0.5)"></div>
+              <div class="cs-bar" style="height:60%;--bc:rgba(139,92,246,0.6)"></div>
+            </div>
+            <div class="cs-mock-stat" style="background:rgba(30,27,75,0.9);border-color:rgba(99,102,241,0.3)">
+              <div class="cs-mock-stat-label" style="color:#a5b4fc">MODEL ACCURACY</div>
+              <div class="cs-mock-stat-val">97.4<span style="color:#818cf8">%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-panel" style="--accent:#10b981; --accent-dim:rgba(16,185,129,0.12);">
+      <div class="cs-panel-inner">
+        <div class="cs-panel-left">
+          <span class="cs-panel-tag">FinTech &nbsp;·&nbsp; 02</span>
+          <h3 class="cs-panel-title">NovaPay FinTech Platform.</h3>
+          <p class="cs-panel-desc">Secure digital payments infrastructure with real-time fraud detection, multi-currency support, and instant transaction analytics at global scale.</p>
+          <div class="cs-panel-tags"><span>Next.js</span><span>Java</span><span>Kafka</span><span>GCP</span></div>
+          <a href="#contact" class="cs-panel-cta">View Case Study &#8599;</a>
+        </div>
+        <div class="cs-panel-right">
+          <div class="cs-mock-card" style="background:linear-gradient(145deg,#031a0e,#0a1f18)">
+            <div class="cs-mock-overlay" style="background:linear-gradient(135deg,rgba(16,185,129,0.25),rgba(6,182,212,0.2))"></div>
+            <div class="cs-mock-topbar"><span></span><span></span><span></span></div>
+            <div class="cs-mock-head" style="color:#6ee7b7">FinTech</div>
+            <div class="cs-mock-sub">NovaPay</div>
+            <div class="cs-mock-bars">
+              <div class="cs-bar" style="height:60%;--bc:rgba(16,185,129,0.7)"></div>
+              <div class="cs-bar" style="height:40%;--bc:rgba(6,182,212,0.6)"></div>
+              <div class="cs-bar" style="height:80%;--bc:rgba(16,185,129,0.5)"></div>
+              <div class="cs-bar" style="height:55%;--bc:rgba(6,182,212,0.7)"></div>
+              <div class="cs-bar" style="height:70%;--bc:rgba(16,185,129,0.6)"></div>
+            </div>
+            <div class="cs-mock-stat" style="background:rgba(6,78,59,0.9);border-color:rgba(16,185,129,0.3)">
+              <div class="cs-mock-stat-label" style="color:#6ee7b7">UPTIME SLA</div>
+              <div class="cs-mock-stat-val">99.9<span style="color:#34d399">%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-panel" style="--accent:#f59e0b; --accent-dim:rgba(245,158,11,0.12);">
+      <div class="cs-panel-inner">
+        <div class="cs-panel-left">
+          <span class="cs-panel-tag">Enterprise SaaS &nbsp;·&nbsp; 03</span>
+          <h3 class="cs-panel-title">TalentOS HR Suite.</h3>
+          <p class="cs-panel-desc">Enterprise-grade SaaS for talent management, AI-powered resume screening, performance reviews, and workforce analytics powered by GPT-4.</p>
+          <div class="cs-panel-tags"><span>Next.js</span><span>Java</span><span>PostgreSQL</span><span>GPT-4</span></div>
+          <a href="#contact" class="cs-panel-cta">View Case Study &#8599;</a>
+        </div>
+        <div class="cs-panel-right">
+          <div class="cs-mock-card" style="background:linear-gradient(145deg,#1c1400,#251a00)">
+            <div class="cs-mock-overlay" style="background:linear-gradient(135deg,rgba(245,158,11,0.25),rgba(251,191,36,0.15))"></div>
+            <div class="cs-mock-topbar"><span></span><span></span><span></span></div>
+            <div class="cs-mock-head" style="color:#fcd34d">Enterprise SaaS</div>
+            <div class="cs-mock-sub">TalentOS</div>
+            <div class="cs-mock-bars">
+              <div class="cs-bar" style="height:75%;--bc:rgba(245,158,11,0.7)"></div>
+              <div class="cs-bar" style="height:50%;--bc:rgba(251,191,36,0.6)"></div>
+              <div class="cs-bar" style="height:90%;--bc:rgba(245,158,11,0.5)"></div>
+              <div class="cs-bar" style="height:65%;--bc:rgba(251,191,36,0.7)"></div>
+              <div class="cs-bar" style="height:55%;--bc:rgba(245,158,11,0.6)"></div>
+            </div>
+            <div class="cs-mock-stat" style="background:rgba(120,53,15,0.9);border-color:rgba(245,158,11,0.3)">
+              <div class="cs-mock-stat-label" style="color:#fcd34d">ACTIVE USERS</div>
+              <div class="cs-mock-stat-val">10k<span style="color:#fbbf24">+</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-panel" style="--accent:#ef4444; --accent-dim:rgba(239,68,68,0.12);">
+      <div class="cs-panel-inner">
+        <div class="cs-panel-left">
+          <span class="cs-panel-tag">E-Commerce &nbsp;·&nbsp; 04</span>
+          <h3 class="cs-panel-title">Kova Commerce Platform.</h3>
+          <p class="cs-panel-desc">Multi-vendor e-commerce ecosystem with AI product recommendations, dynamic pricing engine, and real-time inventory management at global scale.</p>
+          <div class="cs-panel-tags"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Redis</span></div>
+          <a href="#contact" class="cs-panel-cta">View Case Study &#8599;</a>
+        </div>
+        <div class="cs-panel-right">
+          <div class="cs-mock-card" style="background:linear-gradient(145deg,#1a0808,#200f0f)">
+            <div class="cs-mock-overlay" style="background:linear-gradient(135deg,rgba(239,68,68,0.25),rgba(245,158,11,0.15))"></div>
+            <div class="cs-mock-topbar"><span></span><span></span><span></span></div>
+            <div class="cs-mock-head" style="color:#fca5a5">E-Commerce</div>
+            <div class="cs-mock-sub">Kova Commerce</div>
+            <div class="cs-mock-bars">
+              <div class="cs-bar" style="height:50%;--bc:rgba(239,68,68,0.7)"></div>
+              <div class="cs-bar" style="height:80%;--bc:rgba(245,158,11,0.5)"></div>
+              <div class="cs-bar" style="height:60%;--bc:rgba(239,68,68,0.6)"></div>
+              <div class="cs-bar" style="height:45%;--bc:rgba(245,158,11,0.6)"></div>
+              <div class="cs-bar" style="height:75%;--bc:rgba(239,68,68,0.5)"></div>
+            </div>
+            <div class="cs-mock-stat" style="background:rgba(127,29,29,0.9);border-color:rgba(239,68,68,0.3)">
+              <div class="cs-mock-stat-label" style="color:#fca5a5">REVENUE LIFT</div>
+              <div class="cs-mock-stat-val">3.2<span style="color:#f87171">×</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-panel" style="--accent:#06b6d4; --accent-dim:rgba(6,182,212,0.12);">
+      <div class="cs-panel-inner">
+        <div class="cs-panel-left">
+          <span class="cs-panel-tag">HealthTech &nbsp;·&nbsp; 05</span>
+          <h3 class="cs-panel-title">MedAxis Telehealth App.</h3>
+          <p class="cs-panel-desc">HIPAA-compliant telemedicine platform with AI symptom checker, live HD video consultations, e-prescriptions, and integrated electronic health records.</p>
+          <div class="cs-panel-tags"><span>Flutter</span><span>Java</span><span>ML</span><span>WebRTC</span></div>
+          <a href="#contact" class="cs-panel-cta">View Case Study &#8599;</a>
+        </div>
+        <div class="cs-panel-right">
+          <div class="cs-mock-card" style="background:linear-gradient(145deg,#041820,#081f28)">
+            <div class="cs-mock-overlay" style="background:linear-gradient(135deg,rgba(6,182,212,0.25),rgba(16,185,129,0.15))"></div>
+            <div class="cs-mock-topbar"><span></span><span></span><span></span></div>
+            <div class="cs-mock-head" style="color:#67e8f9">HealthTech</div>
+            <div class="cs-mock-sub">MedAxis</div>
+            <div class="cs-mock-bars">
+              <div class="cs-bar" style="height:65%;--bc:rgba(6,182,212,0.7)"></div>
+              <div class="cs-bar" style="height:85%;--bc:rgba(16,185,129,0.5)"></div>
+              <div class="cs-bar" style="height:50%;--bc:rgba(6,182,212,0.6)"></div>
+              <div class="cs-bar" style="height:70%;--bc:rgba(16,185,129,0.6)"></div>
+              <div class="cs-bar" style="height:40%;--bc:rgba(6,182,212,0.5)"></div>
+            </div>
+            <div class="cs-mock-stat" style="background:rgba(22,78,99,0.9);border-color:rgba(6,182,212,0.3)">
+              <div class="cs-mock-stat-label" style="color:#67e8f9">PATIENTS SERVED</div>
+              <div class="cs-mock-stat-val">50k<span style="color:#22d3ee">+</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-panel" style="--accent:#a855f7; --accent-dim:rgba(168,85,247,0.12);">
+      <div class="cs-panel-inner">
+        <div class="cs-panel-left">
+          <span class="cs-panel-tag">EdTech &nbsp;·&nbsp; 06</span>
+          <h3 class="cs-panel-title">LearnSphere EdTech Platform.</h3>
+          <p class="cs-panel-desc">Adaptive learning platform powered by AI that personalizes course content, tracks mastery progress, and accurately predicts student learning outcomes.</p>
+          <div class="cs-panel-tags"><span>Next.js</span><span>Python</span><span>AWS</span><span>OpenAI</span></div>
+          <a href="#contact" class="cs-panel-cta">View Case Study &#8599;</a>
+        </div>
+        <div class="cs-panel-right">
+          <div class="cs-mock-card" style="background:linear-gradient(145deg,#180a20,#0e0820)">
+            <div class="cs-mock-overlay" style="background:linear-gradient(135deg,rgba(168,85,247,0.25),rgba(236,72,153,0.15))"></div>
+            <div class="cs-mock-topbar"><span></span><span></span><span></span></div>
+            <div class="cs-mock-head" style="color:#d8b4fe">EdTech</div>
+            <div class="cs-mock-sub">LearnSphere</div>
+            <div class="cs-mock-bars">
+              <div class="cs-bar" style="height:55%;--bc:rgba(168,85,247,0.7)"></div>
+              <div class="cs-bar" style="height:80%;--bc:rgba(236,72,153,0.5)"></div>
+              <div class="cs-bar" style="height:65%;--bc:rgba(168,85,247,0.6)"></div>
+              <div class="cs-bar" style="height:90%;--bc:rgba(236,72,153,0.6)"></div>
+              <div class="cs-bar" style="height:50%;--bc:rgba(168,85,247,0.5)"></div>
+            </div>
+            <div class="cs-mock-stat" style="background:rgba(88,28,135,0.9);border-color:rgba(168,85,247,0.3)">
+              <div class="cs-mock-stat-label" style="color:#d8b4fe">ACTIVE LEARNERS</div>
+              <div class="cs-mock-stat-val">200k<span style="color:#c084fc">+</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /cs-stack -->
+</section>
+
+<!-- WHY US -->
+<section id="why" class="section mesh-bg">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">Why Aikron</div>
+      <h2 class="section-title reveal reveal-delay-1">The <span class="grad-text">Aikron Advantage</span></h2>
+      <p class="section-sub reveal reveal-delay-2">We are not just a dev shop. We are your technology partner, invested in your success.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-num">01</div><div class="why-icon">&#9889;</div><div class="why-title">Cutting-Edge Technologies</div><div class="why-desc">We stay at the frontier of modern tech. Our engineers constantly upskill to deliver solutions using the latest, most effective tools available.</div></div>
+      <div class="why-card reveal reveal-delay-1"><div class="why-num">02</div><div class="why-icon">&#127959;&#65039;</div><div class="why-title">Scalable Architecture</div><div class="why-desc">Every system we build is architected to grow with you &mdash; from 100 users to 10 million, without costly rewrites or downtime.</div></div>
+      <div class="why-card reveal reveal-delay-2"><div class="why-num">03</div><div class="why-icon">&#128640;</div><div class="why-title">Fast Development Cycles</div><div class="why-desc">Agile sprints, CI/CD pipelines, and a bias for action means you see working software in weeks, not months.</div></div>
+      <div class="why-card reveal"><div class="why-num">04</div><div class="why-icon">&#129504;</div><div class="why-title">Experienced Engineers</div><div class="why-desc">Our team has shipped products used by millions. Senior-led execution with deep expertise across the full stack and domains.</div></div>
+      <div class="why-card reveal reveal-delay-1"><div class="why-num">05</div><div class="why-icon">&#127807;</div><div class="why-title">Startup-Friendly Approach</div><div class="why-desc">We understand lean budgets, tight timelines, and the need to pivot. Flexible engagement models that fit where you are right now.</div></div>
+      <div class="why-card reveal reveal-delay-2"><div class="why-num">06</div><div class="why-icon">&#128274;</div><div class="why-title">Security &amp; Compliance</div><div class="why-desc">Security-first development practices with GDPR, HIPAA, and SOC2-ready implementations for peace of mind.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section testi-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">Testimonials</div>
+      <h2 class="section-title reveal reveal-delay-1">What Our <span class="grad-text">Clients Say</span></h2>
+      <p class="section-sub reveal reveal-delay-2">Don't just take our word for it. Here's what the teams we've partnered with have to say.</p>
+    </div>
+  </div>
+
+  <!-- Row 1 — scrolls LEFT -->
+  <div class="trow-wrap">
+    <div class="trow trow-left">
+      <!-- set A -->
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Aikron transformed our vague concept into a polished, production-ready AI platform in under 3 months. Their technical depth is unmatched — they consistently surprised us.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#166534,#4ade80)">AR</div><div><div class="tc-name">Arjun Reddy <span class="tc-badge">✓</span></div><div class="tc-role">CTO, DataVault Inc.</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">We launched our Flutter app on iOS and Android simultaneously, on time and on budget. The UX quality blew our initial designs out of the water. Aikron doesn't just build — they elevate.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#a3e635)">SK</div><div><div class="tc-name">Sarah Kim <span class="tc-badge">✓</span></div><div class="tc-role">Founder, PulseHealth</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Our SaaS platform went from MVP to serving 10,000+ enterprise users with zero major incidents. The architecture they designed scaled perfectly. I wouldn't trust another team.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#14532d,#22c55e)">MJ</div><div><div class="tc-name">Marcus Johnson <span class="tc-badge">✓</span></div><div class="tc-role">CEO, Operata</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The ML integration Aikron built reduced our operational costs by 34% in Q1. The ROI was immediate and the implementation was seamless — exceeded every expectation we had.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#166534)">LP</div><div><div class="tc-name">Linh Pham <span class="tc-badge">✓</span></div><div class="tc-role">VP Engineering, ShipRight</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Working with Aikron feels like having a world-class CTO embedded in your team. They ask the right questions, challenge assumptions, and deliver genuinely elegant solutions.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#22c55e,#4ade80)">TC</div><div><div class="tc-name">Thomas Chen <span class="tc-badge">✓</span></div><div class="tc-role">Co-Founder, Nexbridge</div></div></div></div>
+      <!-- set B (duplicate for seamless loop) -->
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Aikron transformed our vague concept into a polished, production-ready AI platform in under 3 months. Their technical depth is unmatched — they consistently surprised us.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#166534,#4ade80)">AR</div><div><div class="tc-name">Arjun Reddy <span class="tc-badge">✓</span></div><div class="tc-role">CTO, DataVault Inc.</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">We launched our Flutter app on iOS and Android simultaneously, on time and on budget. The UX quality blew our initial designs out of the water. Aikron doesn't just build — they elevate.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#a3e635)">SK</div><div><div class="tc-name">Sarah Kim <span class="tc-badge">✓</span></div><div class="tc-role">Founder, PulseHealth</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Our SaaS platform went from MVP to serving 10,000+ enterprise users with zero major incidents. The architecture they designed scaled perfectly. I wouldn't trust another team.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#14532d,#22c55e)">MJ</div><div><div class="tc-name">Marcus Johnson <span class="tc-badge">✓</span></div><div class="tc-role">CEO, Operata</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The ML integration Aikron built reduced our operational costs by 34% in Q1. The ROI was immediate and the implementation was seamless — exceeded every expectation we had.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#166534)">LP</div><div><div class="tc-name">Linh Pham <span class="tc-badge">✓</span></div><div class="tc-role">VP Engineering, ShipRight</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Working with Aikron feels like having a world-class CTO embedded in your team. They ask the right questions, challenge assumptions, and deliver genuinely elegant solutions.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#22c55e,#4ade80)">TC</div><div><div class="tc-name">Thomas Chen <span class="tc-badge">✓</span></div><div class="tc-role">Co-Founder, Nexbridge</div></div></div></div>
+    </div>
+  </div>
+
+  <!-- Row 2 — scrolls RIGHT -->
+  <div class="trow-wrap">
+    <div class="trow trow-right">
+      <!-- set A -->
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">We needed a startup-friendly team who could move fast without breaking things. Aikron delivered our e-commerce MVP in 8 weeks, and we raised a Series A three months later.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#a3e635,#4ade80)">FO</div><div><div class="tc-name">Fatima Ouali <span class="tc-badge">✓</span></div><div class="tc-role">Founder, Bazaar</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The React dashboard they built is lightning fast and incredibly intuitive. Users love it — our NPS jumped 22 points after launch. Exceptional frontend engineering from start to finish.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#0e7490,#06b6d4)">DK</div><div><div class="tc-name">Dev Kapoor <span class="tc-badge">✓</span></div><div class="tc-role">Head of Product, Analytix</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Our mobile app had terrible ratings before Aikron rebuilt it. Three months after relaunch we hit 4.8 stars on both stores with a 60% improvement in daily active users.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">NR</div><div><div class="tc-name">Nadia Rais <span class="tc-badge">✓</span></div><div class="tc-role">CPO, MobiCore</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Aikron's team is genuinely rare. They bring enterprise-level discipline to startup-speed execution. We've shipped three major product lines with them and every single one has exceeded KPIs.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#b45309,#f59e0b)">JW</div><div><div class="tc-name">James Wu <span class="tc-badge">✓</span></div><div class="tc-role">CEO, Helix Labs</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The Java backend they built handles 2M+ daily transactions without a single downtime incident in 14 months. That kind of reliability is priceless when you're in the payments space.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#0369a1,#38bdf8)">PM</div><div><div class="tc-name">Priya Mehta <span class="tc-badge">✓</span></div><div class="tc-role">CTO, ClearPay</div></div></div></div>
+      <!-- set B (duplicate) -->
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">We needed a startup-friendly team who could move fast without breaking things. Aikron delivered our e-commerce MVP in 8 weeks, and we raised a Series A three months later.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#a3e635,#4ade80)">FO</div><div><div class="tc-name">Fatima Ouali <span class="tc-badge">✓</span></div><div class="tc-role">Founder, Bazaar</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The React dashboard they built is lightning fast and incredibly intuitive. Users love it — our NPS jumped 22 points after launch. Exceptional frontend engineering from start to finish.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#0e7490,#06b6d4)">DK</div><div><div class="tc-name">Dev Kapoor <span class="tc-badge">✓</span></div><div class="tc-role">Head of Product, Analytix</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Our mobile app had terrible ratings before Aikron rebuilt it. Three months after relaunch we hit 4.8 stars on both stores with a 60% improvement in daily active users.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">NR</div><div><div class="tc-name">Nadia Rais <span class="tc-badge">✓</span></div><div class="tc-role">CPO, MobiCore</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Aikron's team is genuinely rare. They bring enterprise-level discipline to startup-speed execution. We've shipped three major product lines with them and every single one has exceeded KPIs.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#b45309,#f59e0b)">JW</div><div><div class="tc-name">James Wu <span class="tc-badge">✓</span></div><div class="tc-role">CEO, Helix Labs</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The Java backend they built handles 2M+ daily transactions without a single downtime incident in 14 months. That kind of reliability is priceless when you're in the payments space.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#0369a1,#38bdf8)">PM</div><div><div class="tc-name">Priya Mehta <span class="tc-badge">✓</span></div><div class="tc-role">CTO, ClearPay</div></div></div></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section id="cta" class="section mesh-bg">
+  <div class="container">
+    <div class="tag reveal" style="margin:0 auto 20px;width:fit-content">Get Started</div>
+    <h2 class="cta-title reveal reveal-delay-1">Let's Build Your <span class="grad-text">Next Big Idea</span></h2>
+    <p class="cta-sub reveal reveal-delay-2">Whether you're a startup with a concept or an enterprise seeking transformation, we're ready to build something extraordinary together.</p>
+    <div class="cta-btns reveal reveal-delay-3">
+      <a href="#contact" class="btn btn-primary" style="font-size:16px;padding:16px 32px;">Book a Free Consultation &rarr;</a>
+      <a href="#portfolio" class="btn btn-outline" style="font-size:16px;padding:16px 32px;">Explore Our Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section" style="background:#f4faf5;">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag reveal">Contact Us</div>
+      <h2 class="section-title reveal reveal-delay-1">Start a <span class="grad-text">Conversation</span></h2>
+      <p class="section-sub reveal reveal-delay-2">Tell us about your project and we'll get back to you within 24 hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-info-title">We'd Love to <span class="grad-text">Hear from You</span></div>
+        <p class="contact-info-sub">Whether you have a fully scoped project or just an idea you want to explore, our team is ready to listen, advise, and partner with you.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="/cdn-cgi/l/email-protection#c6aea3aaaaa986a7afada9b4a8e8afa9"><div class="contact-link-icon" style="background:rgba(74,222,128,0.1)">&#9993;&#65039;</div><div><div class="contact-link-label">Email Us</div><div class="contact-link-text"><span class="__cf_email__" data-cfemail="85ede0e9e9eac5e4eceeeaf7ebabecea">[email&#160;protected]</span></div></div></a>
+          <a class="contact-link" href="tel:+11234567890"><div class="contact-link-icon" style="background:rgba(74,222,128,0.12)">&#128222;</div><div><div class="contact-link-label">Call Us</div><div class="contact-link-text">+1 (123) 456-7890</div></div></a>
+          <a class="contact-link" href="#"><div class="contact-link-icon" style="background:rgba(163,230,53,0.1)">&#128205;</div><div><div class="contact-link-label">Office</div><div class="contact-link-text">San Francisco, CA &amp; Remote Worldwide</div></div></a>
+          <a class="contact-link" href="#"><div class="contact-link-icon" style="background:rgba(74,222,128,0.08)">&#128279;</div><div><div class="contact-link-label">LinkedIn</div><div class="contact-link-text">linkedin.com/company/aikorn</div></div></a>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div style="background:#f4faf5;border:1px solid rgba(0,100,30,0.1);border-radius:12px;padding:36px;">
+          <form id="contactForm" action="https://formspree.io/f/xojkvvdo" method="POST" onsubmit="handleFormSubmit(event)">
+            <div class="form-row">
+              <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="John" required /></div>
+              <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Doe" /></div>
+            </div>
+            <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="john@company.com" required /></div>
+            <div class="form-group"><label>Company</label><input type="text" name="company" placeholder="Your company name" /></div>
+            <div class="form-group"><label>Contact</label><input type="text" name="company" placeholder="Your company name" /></div>
+            
+            <div class="form-group">
+              <label>Service You Need</label>
+              <select name="service">
+                <option value="" disabled selected>Select a service&hellip;</option>
+                <option>Web Development</option>
+                <option>Mobile App Development</option>
+                <option>AI / ML Solutions</option>
+                <option>UI/UX Design</option>
+                <option>SaaS Product Development</option>
+                <option>Startup MVP</option>
+                <option>Cloud &amp; Backend</option>
+                <option>Automation</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Tell Us About Your Project</label><textarea name="message" placeholder="Describe your project, timeline, and goals&hellip;" required></textarea></div>
+            <button type="submit" class="btn btn-primary form-submit" id="submitBtn">Send Message &rarr;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Aik<span>orn</span></div>
+        <div class="footer-tagline">Building next-generation digital products with cutting-edge technologies. Your trusted partner from idea to scale.</div>
+        <div class="social-links">
+          <a class="social-link" href="#" title="Twitter">&#120143;</a>
+          <a class="social-link" href="#" title="LinkedIn">in</a>
+          <a class="social-link" href="#" title="GitHub">&#9095;</a>
+          <a class="social-link" href="#" title="Dribbble">&#9673;</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Web Development</a></li>
+          <li><a href="#services">Mobile Apps</a></li>
+          <li><a href="#services">AI / ML Solutions</a></li>
+          <li><a href="#services">UI/UX Design</a></li>
+          <li><a href="#services">SaaS Development</a></li>
+          <li><a href="#services">Cloud &amp; Backend</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Technologies</div>
+        <ul class="footer-links">
+          <li><a href="#services">React &amp; Next.js</a></li>
+          <li><a href="#services">Flutter</a></li>
+          <li><a href="#services">Java &amp; Spring Boot</a></li>
+          <li><a href="#services">Python &amp; ML</a></li>
+          <li><a href="#services">AWS &amp; Cloud</a></li>
+          <li><a href="#services">Figma &amp; Design</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#portfolio">Our Work</a></li>
+          <li><a href="#process">How We Work</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 Aikron. All rights reserved.</div>
+      <div style="display:flex;gap:24px;">
+        <a href="#" style="font-size:13px;color:var(--muted);text-decoration:none;">Privacy Policy</a>
+        <a href="#" style="font-size:13px;color:var(--muted);text-decoration:none;">Terms of Service</a>
+        <a href="#" style="font-size:13px;color:var(--muted);text-decoration:none;">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
