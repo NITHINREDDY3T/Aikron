@@ -125,7 +125,7 @@ h1,h2,h3,h4 { font-family: var(--font-display); }
   overflow: hidden;
 }
 .btn-primary {
-  background: var(--green);
+  background: #5bd989;
   color: #54dd87;
 }
 .btn-primary:hover {
