@@ -14,12 +14,15 @@ window.addEventListener('scroll', () => {
 // MOBILE MENU
 document.getElementById('hamburger').addEventListener('click', () => {
   document.getElementById('mobileMenu').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('active');
 });
 document.getElementById('mobileClose').addEventListener('click', () => {
   document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('active');
 });
 function closeMobile() {
   document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('active');
 }
 
 // SCROLL REVEAL
