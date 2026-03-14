@@ -780,32 +780,27 @@ h1.hero-title {
 .portfolio-section {
   background: #f4faf5;
   padding-top: 110px;
-  padding-bottom: 0;           /* stack handles its own bottom space */
+  padding-bottom: 0;
 }
 
-/* Stack container — tall enough for all cards to scroll through */
 .cs-stack {
   position: relative;
   padding-bottom: 60px;
 }
 
-/* Spacer between panels gives each card room to "stick" before the next arrives */
 .cs-panel + .cs-panel {
   margin-top: 260px;
 }
 
-/* ── Each sticky panel ── */
 .cs-panel {
   position: sticky;
-  top: 90px;                   /* stops just below the fixed nav */
+  top: 90px;
   margin: 0 auto 24px;
   max-width: 1200px;
   padding: 0 28px;
-  /* layering: later panels sit on top of earlier ones */
   z-index: var(--z, 1);
 }
 
-/* Give each panel its own z-index via nth-child */
 .cs-panel:nth-child(1) { --z:1; }
 .cs-panel:nth-child(2) { --z:2; }
 .cs-panel:nth-child(3) { --z:3; }
@@ -813,7 +808,6 @@ h1.hero-title {
 .cs-panel:nth-child(5) { --z:5; }
 .cs-panel:nth-child(6) { --z:6; }
 
-/* The visible card surface */
 .cs-panel-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -826,7 +820,6 @@ h1.hero-title {
   box-shadow:
     0 4px 6px rgba(0,0,0,0.02),
     0 20px 40px rgba(0,0,0,0.06);
-  /* subtle top accent line in the panel's own colour */
   border-top: 3px solid var(--accent);
   transition: box-shadow 0.35s;
   min-height: 380px;
@@ -861,18 +854,18 @@ h1.hero-title {
 }
 
 .cs-panel-title {
-  font-family: var(--font-display);
+  font-family: var(--font-display, 'Syne', sans-serif);
   font-size: clamp(24px, 3vw, 36px);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  color: var(--text);
+  color: var(--text, #111);
   margin: 0;
 }
 
 .cs-panel-desc {
   font-size: 14.5px;
-  color: var(--muted);
+  color: var(--muted, #666);
   line-height: 1.78;
   margin: 0;
 }
@@ -909,98 +902,202 @@ h1.hero-title {
 }
 .cs-panel-cta:hover { gap: 10px; }
 
-/* ── RIGHT mock UI card ── */
-.cs-panel-right { position: relative; }
+/* ── RIGHT — Client Review Card ── */
+.cs-panel-right {
+  position: relative;
+}
 
-.cs-mock-card {
-  border-radius: 16px;
-  height: 280px;
+.cs-review-card {
+  border-radius: 20px;
+  background: var(--rc-bg);
+  box-shadow:
+    0 0 0 1px var(--rc-border),
+    0 24px 60px rgba(0,0,0,0.35),
+    0 0 60px var(--rc-glow);
+  padding: 32px 32px 28px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
-.cs-mock-overlay {
+/* Top glow */
+.cs-review-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rc-accent), transparent);
+  opacity: 0.6;
+}
+
+/* Background noise / depth layer */
+.cs-review-card::after {
+  content: '';
   position: absolute;
   inset: 0;
+  background: radial-gradient(ellipse at 80% 0%, var(--rc-glow) 0%, transparent 60%);
+  pointer-events: none;
 }
 
-.cs-mock-topbar {
-  position: absolute;
-  top: 20px; left: 22px;
+/* ── Top row: stars + verified badge ── */
+.cs-review-top {
   display: flex;
-  gap: 7px;
-  z-index: 2;
-}
-.cs-mock-topbar span {
-  width: 11px; height: 11px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.18);
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
 
-.cs-mock-head {
-  position: absolute;
-  top: 52px; left: 22px;
+.cs-review-stars {
+  display: flex;
+  gap: 3px;
+}
+.cs-review-stars span {
+  color: var(--rc-accent);
+  font-size: 15px;
+  filter: drop-shadow(0 0 4px var(--rc-accent));
+}
+
+.cs-review-verified {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  opacity: 0.8;
-  z-index: 2;
+  color: var(--rc-accent);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--rc-border);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-family: 'DM Sans', sans-serif;
+}
+.cs-review-verified::before {
+  content: '✓';
+  font-size: 10px;
+  font-weight: 800;
 }
 
-.cs-mock-sub {
-  position: absolute;
-  top: 70px; left: 22px;
-  font-family: var(--font-display);
-  font-size: 20px;
+/* ── Quote text ── */
+.cs-review-quote-wrap {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 24px;
+}
+
+.cs-review-openquote {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 56px;
+  line-height: 0.6;
+  color: var(--rc-accent);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cs-review-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.82);
+  margin: 0;
+}
+
+/* ── Divider ── */
+.cs-review-divider {
+  height: 1px;
+  background: linear-gradient(90deg, var(--rc-border), transparent);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Author row ── */
+.cs-review-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.cs-review-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
   font-weight: 800;
   color: #fff;
-  letter-spacing: -0.02em;
-  z-index: 2;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  font-family: 'Syne', sans-serif;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
-/* Bar chart at bottom of mock */
-.cs-mock-bars {
-  position: absolute;
-  bottom: 58px; left: 22px; right: 22px;
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-  height: 100px;
-  z-index: 2;
-}
-.cs-bar {
+.cs-review-info {
   flex: 1;
-  height: var(--h, 60%);
-  border-radius: 5px 5px 0 0;
-  background: var(--bc);
 }
 
-/* Stat chip */
-.cs-mock-stat {
-  position: absolute;
-  bottom: 16px; right: 16px;
-  padding: 10px 16px;
-  border-radius: 12px;
-  border: 1px solid;
-  backdrop-filter: blur(10px);
-  z-index: 3;
+.cs-review-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
-.cs-mock-stat-label {
+
+.cs-review-role {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 3px;
+}
+
+/* ── Stat pill ── */
+.cs-review-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--rc-border);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+
+.cs-review-stat-label {
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 3px;
+  color: var(--rc-accent);
+  font-family: 'DM Sans', sans-serif;
+  opacity: 0.8;
+  white-space: nowrap;
 }
-.cs-mock-stat-val {
-  font-family: var(--font-display);
-  font-size: 22px;
+
+.cs-review-stat-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
   font-weight: 800;
   color: #fff;
+  line-height: 1.1;
 }
-.cs-mock-stat-val span { font-size: 14px; }
+.cs-review-stat-val span {
+  font-size: 13px;
+  color: var(--rc-accent);
+}
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
@@ -1010,14 +1107,14 @@ h1.hero-title {
     padding: 36px 32px;
     min-height: auto;
   }
-  .cs-mock-card { height: 220px; }
   .cs-panel { top: 80px; }
 }
 @media (max-width: 640px) {
   .cs-panel-inner { padding: 28px 22px; border-radius: 14px; }
   .cs-panel { padding: 0 14px; top: 72px; }
-  .cs-mock-card { height: 180px; }
   .cs-panel-title { font-size: 22px; }
+  .cs-review-text { font-size: 13px; }
+  .cs-review-card { padding: 24px 22px 22px; }
 }
 
 /* ── WHY US ────────────────────────────────── */
