@@ -203,7 +203,7 @@ animate();
 
 // ── HERO STAT COUNT-UP ───────────────────────
 (function () {
-  const suffixes = { 120: '+', 98: '%', 5: '+', 40: '+' };
+  const suffixes = { 100: '+', 98: '%', 2: '+', 15: '+' };
   const nums = document.querySelectorAll('.stat-num[data-count]');
   if (!nums.length) return;
 
