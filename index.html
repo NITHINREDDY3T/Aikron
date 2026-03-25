@@ -9,8 +9,10 @@
 <link rel="icon" type="image/png" sizes="16x16" href="tranparent logo.png">
 <link rel="apple-touch-icon" sizes="180x180" href="tranparent logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Literata:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <!-- LOADER -->
@@ -26,7 +28,7 @@
   <button class="mobile-close" id="mobileClose">✕</button>
   <a href="#about" onclick="closeMobile()">About</a>
   <a href="#services" onclick="closeMobile()">Services</a>
-  <a href="#portfolio" onclick="closeMobile()">Work</a>
+  <a href="#process" onclick="closeMobile()">Process</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
 </div>
 
@@ -39,8 +41,6 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#process">Process</a></li>
-        <li><a href="#portfolio">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-cta">
         <a href="#contact" class="btn btn-outline" style="padding:10px 20px; font-size:14px;">Contact Us</a>
@@ -75,7 +75,7 @@
     <div class="hero-content">
       <div class="hero-eyebrow">
         <div class="hero-eyebrow-dot"></div>
-        Full-Stack Digital Solutions Provider
+        Partnering with businesses to build products
       </div>
       <h1 class="hero-title">
         Building <span class="grad-text"><span id="typewriter">Next-Generation</span></span><br>Digital Products
@@ -85,7 +85,7 @@
       </p>
       <div class="hero-btns">
        
-        <a href="#portfolio" class="btn btn-outline">View Our Work</a>
+        <a href="#contact" class="btn btn-outline">Get Started</a>
       </div>
       
     </div>
@@ -253,6 +253,7 @@
   </div>
 </section>
 
+
 <!-- SERVICES -->
 <section id="services" class="section" style="background:#f4faf5;">
   <div class="container">
@@ -262,18 +263,113 @@
       <p class="section-sub reveal reveal-delay-2">From ideation to post-launch, we cover every layer of your digital product journey.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card reveal"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(74,222,128,0.1)">&#127760;</div><div class="svc-name">Web Development</div><div class="svc-desc">High-performance web applications built with React, Next.js and modern architectures that scale effortlessly.</div></div>
-      <div class="service-card reveal reveal-delay-1"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(163,230,53,0.1)">&#128241;</div><div class="svc-name">Mobile App Development</div><div class="svc-desc">Cross-platform apps with Flutter and native iOS/Android that deliver pixel-perfect experiences on every device.</div></div>
-      <div class="service-card reveal reveal-delay-2"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(74,222,128,0.08)">&#129302;</div><div class="svc-name">AI / ML Solutions</div><div class="svc-desc">Intelligent systems powered by machine learning, deep learning, and large language models integrated into your product.</div></div>
-      <div class="service-card reveal reveal-delay-3"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(163,230,53,0.08)">&#127912;</div><div class="svc-name">UI/UX Design</div><div class="svc-desc">Research-driven design systems and prototypes in Figma that convert users and stand out in the market.</div></div>
-      <div class="service-card reveal"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(74,222,128,0.12)">&#9729;&#65039;</div><div class="svc-name">SaaS Product Development</div><div class="svc-desc">Full-featured SaaS platforms with subscription billing, multi-tenancy, and enterprise-grade infrastructure.</div></div>
-      <div class="service-card reveal reveal-delay-1"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(74,222,128,0.06)">&#128640;</div><div class="svc-name">Startup MVP Development</div><div class="svc-desc">Rapid MVP delivery in 6&ndash;10 weeks so you can validate your idea with real users and real data, fast.</div></div>
-      <div class="service-card reveal reveal-delay-2"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(74,222,128,0.1)">&#9881;&#65039;</div><div class="svc-name">Cloud &amp; Backend Systems</div><div class="svc-desc">Robust Java/Spring Boot and Node.js backends with cloud infrastructure designed for resilience at scale.</div></div>
-      <div class="service-card reveal reveal-delay-3"><div class="svc-arrow">&#8599;</div><div class="svc-icon" style="background:rgba(163,230,53,0.1)">&#9889;</div><div class="svc-name">Automation Solutions</div><div class="svc-desc">Workflow automation, data pipelines, and intelligent bots that eliminate repetitive processes and multiply productivity.</div></div>
+
+      <!-- 1. Web Development -->
+<div class="service-card reveal">
+  <div class="svc-arrow">&#8599;</div>
+
+  <div class="svc-icon" style="background:rgba(74,222,128,0.1)">
+    <i class="fas fa-code" style="color: #059669; font-size: 20px;"></i>
+  </div>
+
+  <div class="svc-name">Web Development</div>
+  <div class="svc-desc">
+    High-performance web applications built with React, Next.js and modern architectures that scale effortlessly.
+  </div>
+</div>
+
+      <!-- 2. Mobile App Development -->
+      <div class="service-card reveal reveal-delay-1">
+        <div class="svc-arrow">&#8599;</div>
+        <div class="svc-icon" style="background:rgba(163,230,53,0.1)">
+          <i class="fas fa-mobile-alt" style="color: #0891b2; font-size: 20px;"></i>
+        </div>
+        <div class="svc-name">Mobile App Development</div>
+        <div class="svc-desc">Cross-platform apps with Flutter and native iOS/Android that deliver pixel-perfect experiences on every device.</div>
+      </div>
+
+     <!-- 3. AI / ML Solutions -->
+<div class="service-card reveal reveal-delay-2">
+  <div class="svc-arrow">&#8599;</div>
+
+  <div class="svc-icon" style="background:rgba(74,222,128,0.08)">
+    <i class="fas fa-brain" style="color: #7c3aed; font-size: 20px;"></i>
+  </div>
+
+  <div class="svc-name">AI / ML Solutions</div>
+  <div class="svc-desc">
+    Intelligent systems powered by machine learning, deep learning, and large language models integrated into your product.
+  </div>
+</div>
+
+      <!-- 4. UI/UX Design -->
+      <div class="service-card reveal reveal-delay-3">
+        <div class="svc-arrow">&#8599;</div>
+        <div class="svc-icon" style="background:rgba(163,230,53,0.08)">
+          <i class="fas fa-palette" style="color: #dc2626; font-size: 20px;"></i>
+        </div>
+        <div class="svc-name">UI/UX Design</div>
+        <div class="svc-desc">Research-driven design systems and prototypes in Figma that convert users and stand out in the market.</div>
+      </div>
+
+     <!-- 5. SaaS Product Development -->
+<div class="service-card reveal">
+  <div class="svc-arrow">&#8599;</div>
+
+  <div class="svc-icon" style="background:rgba(74,222,128,0.12)">
+    <i class="fas fa-cloud" style="color: #0284c7; font-size: 20px;"></i>
+  </div>
+
+  <div class="svc-name">SaaS Product Development</div>
+  <div class="svc-desc">
+    Full-featured SaaS platforms with subscription billing, multi-tenancy, and enterprise-grade infrastructure.
+  </div>
+</div>
+
+    <!-- 6. Startup MVP Development -->
+<div class="service-card reveal reveal-delay-1">
+  <div class="svc-arrow">&#8599;</div>
+
+  <div class="svc-icon" style="background:rgba(74,222,128,0.06)">
+    <i class="fas fa-rocket" style="color: #ea580c; font-size: 20px;"></i>
+  </div>
+
+  <div class="svc-name">Startup MVP Development</div>
+  <div class="svc-desc">
+    Rapid MVP delivery in 6&ndash;10 weeks so you can validate your idea with real users and real data, fast.
+  </div>
+</div>
+
+      <!-- 7. Cloud & Backend Systems -->
+<div class="service-card reveal reveal-delay-2">
+  <div class="svc-arrow">&#8599;</div>
+
+  <div class="svc-icon" style="background:rgba(74,222,128,0.1)">
+    <i class="fas fa-server" style="color: #059669; font-size: 20px;"></i>
+  </div>
+
+  <div class="svc-name">Cloud &amp; Backend Systems</div>
+  <div class="svc-desc">
+    Robust Java/Spring Boot and Node.js backends with cloud infrastructure designed for resilience at scale.
+  </div>
+</div>
+
+     <!-- 8. Automation Solutions -->
+<div class="service-card reveal reveal-delay-3">
+  <div class="svc-arrow">&#8599;</div>
+
+  <div class="svc-icon" style="background:rgba(163,230,53,0.1)">
+    <i class="fas fa-cogs" style="color: #0891b2; font-size: 20px;"></i>
+  </div>
+
+  <div class="svc-name">Automation Solutions</div>
+  <div class="svc-desc">
+    Workflow automation, data pipelines, and intelligent bots that eliminate repetitive processes and multiply productivity.
+  </div>
+</div>
     </div>
   </div>
 </section>
-
 <!-- PROCESS -->
 <section id="process" class="section mesh-bg">
   <div class="container">
@@ -292,239 +388,6 @@
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio" class="section portfolio-section">
-  <div class="container">
-    <div class="section-header">
-      <div class="tag reveal">Our Work</div>
-      <h2 class="section-title reveal reveal-delay-1">Featured <span class="grad-text">Case Studies</span></h2>
-      <p class="section-sub reveal reveal-delay-2">A selection of projects that showcase our technical depth and design excellence.</p>
-    </div>
-  </div>
-
-  <!-- Stacked scroll cards -->
-  
-   <div class="cs-stack" id="csStack">
-
-    <!-- 01 AI Platform -->
-    <div class="cs-panel" style="--accent:#16a34a; --accent-dim:rgba(99,102,241,0.12);">
-      <div class="cs-panel-inner">
-        <div class="cs-panel-left">
-          <span class="cs-panel-tag">Sweet Treat &nbsp;·&nbsp; 01</span>
-          <h3 class="cs-panel-title">Sweet Treat Cafe Bringing the Cafe Online.</h3>
-          <p class="cs-panel-desc">We developed a modern digital platform for Sweet Treat Cafe, designed to enhance their online presence and streamline customer engagement. The solution delivers a seamless browsing experience for menu exploration, orders, and brand storytelling.</p>
-          <div class="cs-panel-tags"><span>React</span><span>Css</span><span>Figma</span><span>Cloud Flare</span></div>
-          <a href="#contact" class="cs-panel-cta">View Case Study &#8599;</a>
-        </div>
-        <div class="cs-panel-right">
-          <div class="cs-review-card" style="--rc-bg:linear-gradient(145deg,#0f1629,#1a0a2e); --rc-glow:rgba(99,102,241,0.2); --rc-border:rgba(99,102,241,0.25); --rc-accent:#a5b4fc;">
-            <div class="cs-review-top">
-              <div class="cs-review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-              <div class="cs-review-verified">Verified Client</div>
-            </div>
-            <div class="cs-review-quote-wrap">
-              <span class="cs-review-openquote">"</span>
-              <p class="cs-review-text">The analytics platform transformed how our data team operates. Anomaly detection alone saved us 40+ engineering hours per week. Truly exceptional work from start to finish.</p>
-            </div>
-            <div class="cs-review-divider"></div>
-            <div class="cs-review-author">
-              <div class="cs-review-avatar" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">JM</div>
-              <div class="cs-review-info">
-                <div class="cs-review-name">James Mitchell</div>
-                <div class="cs-review-role"></div>
-              </div>
-              <div class="cs-review-stat" style="--rc-border:rgba(99,102,241,0.25);">
-      
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 02 FinTech -->
-    <div class="cs-panel" style="--accent:#16a34a; --accent-dim:rgba(16,185,129,0.12);">
-      <div class="cs-panel-inner">
-        <div class="cs-panel-left">
-          <span class="cs-panel-tag">Its Linked.in &nbsp;·&nbsp; 02</span>
-          <h3 class="cs-panel-title">Inspired Content Sharing Platform.</h3>
-          <p class="cs-panel-desc">We developed a LinkedIn-style social platform that enables users to share updates, posts, and insights while supporting seamless content publishing, interaction, and professional networking in a clean, user-friendly environment.</p>
-          <div class="cs-panel-tags"><span>Node js</span><span>Angular</span><span>MongoDB</span><span>GCP</span></div>
-          <a href="#contact" class="cs-panel-cta">View Case Study &#8599;</a>
-        </div>
-        <div class="cs-panel-right">
-          <div class="cs-review-card" style="--rc-bg:linear-gradient(145deg,#031a0e,#0a1f18); --rc-glow:rgba(16,185,129,0.18); --rc-border:rgba(16,185,129,0.25); --rc-accent:#6ee7b7;">
-            <div class="cs-review-top">
-              <div class="cs-review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-              <div class="cs-review-verified">Verified Client</div>
-            </div>
-            <div class="cs-review-quote-wrap">
-              <span class="cs-review-openquote">"</span>
-              <p class="cs-review-text">NovaPay's fraud detection flagged 99.7% of suspicious transactions before they hit. Our chargeback rate dropped by 82%. Uptime has been flawless across all 12 markets.</p>
-            </div>
-            <div class="cs-review-divider"></div>
-            <div class="cs-review-author">
-              <div class="cs-review-avatar" style="background:linear-gradient(135deg,#10b981,#06b6d4)">SR</div>
-              <div class="cs-review-info">
-                <div class="cs-review-name">Sofia Reyes</div>
-                <div class="cs-review-role"></div>
-              </div>
-              <div class="cs-review-stat">
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 03 Enterprise SaaS -->
-    <div class="cs-panel" style="--accent:#16a34a; --accent-dim:rgba(245,158,11,0.12);">
-      <div class="cs-panel-inner">
-        <div class="cs-panel-left">
-          <span class="cs-panel-tag">OneConnect &nbsp;·&nbsp; 03</span>
-          <h3 class="cs-panel-title">A Master App.</h3>
-          <p class="cs-panel-desc">A smart super-app that unifies everyday services like food delivery, healthcare, and transportation into a single convenient ecosystem.</p>
-          <div class="cs-panel-tags"><span>Flutter</span><span>Spring Boot</span><span>AWS</span><span>Figma</span></div>
-          <a href="#contact" class="cs-panel-cta">View Case Study &#8599;</a>
-        </div>
-        <div class="cs-panel-right">
-          <div class="cs-review-card" style="--rc-bg:linear-gradient(145deg,#1c1400,#251a00); --rc-glow:rgba(245,158,11,0.18); --rc-border:rgba(245,158,11,0.25); --rc-accent:#fcd34d;">
-            <div class="cs-review-top">
-              <div class="cs-review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-              <div class="cs-review-verified">Verified Client</div>
-            </div>
-            <div class="cs-review-quote-wrap">
-              <span class="cs-review-openquote">"</span>
-              <p class="cs-review-text">TalentOS cut our hiring cycle from 6 weeks to 9 days. The AI screening is scarily accurate we've onboarded 10,000+ employees through it with a 94% retention rate.</p>
-            </div>
-            <div class="cs-review-divider"></div>
-            <div class="cs-review-author">
-              <div class="cs-review-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">AK</div>
-              <div class="cs-review-info">
-                <div class="cs-review-name">Arjun Kapoor</div>
-                <div class="cs-review-role"></div>
-              </div>
-              <div class="cs-review-stat">
-               
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 04 E-Commerce -->
-    <div class="cs-panel" style="--accent:#16a34a; --accent-dim:rgba(239,68,68,0.12);">
-      <div class="cs-panel-inner">
-        <div class="cs-panel-left">
-          <span class="cs-panel-tag">G Mart &nbsp;·&nbsp; 04</span>
-          <h3 class="cs-panel-title">E Commerce Platform.</h3>
-          <p class="cs-panel-desc">We developed a modern e-commerce platform integrated with an intelligent recommendation system that analyzes user behavior to suggest personalized products and enhance the overall shopping experience.</p>
-          <div class="cs-panel-tags"><span>Spring Boot</span><span>React</span><span>MongoDB</span><span>Figma</span></div>
-          <a href="#contact" class="cs-panel-cta">View Case Study &#8599;</a>
-        </div>
-        <div class="cs-panel-right">
-          <div class="cs-review-card" style="--rc-bg:linear-gradient(145deg,#1a0808,#200f0f); --rc-glow:rgba(239,68,68,0.18); --rc-border:rgba(239,68,68,0.25); --rc-accent:#fca5a5;">
-            <div class="cs-review-top">
-              <div class="cs-review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-              <div class="cs-review-verified">Verified Client</div>
-            </div>
-            <div class="cs-review-quote-wrap">
-              <span class="cs-review-openquote">"</span>
-              <p class="cs-review-text">Revenue tripled within 5 months. The AI recommendations are spot-on our cart abandonment dropped 61%. Kova is now the backbone of our entire marketplace operation.</p>
-            </div>
-            <div class="cs-review-divider"></div>
-            <div class="cs-review-author">
-              <div class="cs-review-avatar" style="background:linear-gradient(135deg,#ef4444,#f59e0b)">LC</div>
-              <div class="cs-review-info">
-                <div class="cs-review-name">Laura Chen</div>
-                <div class="cs-review-role"></div>
-              </div>
-              <div class="cs-review-stat">
-              
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 05 HealthTech -->
-    <div class="cs-panel" style="--accent:#16a34a; --accent-dim:rgba(6,182,212,0.12);">
-      <div class="cs-panel-inner">
-        <div class="cs-panel-left">
-          <span class="cs-panel-tag">HealthTech &nbsp;·&nbsp; 05</span>
-          <h3 class="cs-panel-title">MedAxis Telehealth App.</h3>
-          <p class="cs-panel-desc">HIPAA-compliant telemedicine platform with AI symptom checker, live HD video consultations, e-prescriptions, and integrated electronic health records.</p>
-          <div class="cs-panel-tags"><span>Flutter</span><span>Java</span><span>ML</span><span>WebRTC</span></div>
-          <a href="#contact" class="cs-panel-cta">View Case Study &#8599;</a>
-        </div>
-        <div class="cs-panel-right">
-          <div class="cs-review-card" style="--rc-bg:linear-gradient(145deg,#041820,#081f28); --rc-glow:rgba(6,182,212,0.18); --rc-border:rgba(6,182,212,0.25); --rc-accent:#67e8f9;">
-            <div class="cs-review-top">
-              <div class="cs-review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-              <div class="cs-review-verified">Verified Client</div>
-            </div>
-            <div class="cs-review-quote-wrap">
-              <span class="cs-review-openquote">"</span>
-              <p class="cs-review-text">MedAxis handles 50,000+ patients seamlessly. HD video is crystal-clear even on low-bandwidth. HIPAA compliance was built right in no headaches, no compliance gaps whatsoever.</p>
-            </div>
-            <div class="cs-review-divider"></div>
-            <div class="cs-review-author">
-              <div class="cs-review-avatar" style="background:linear-gradient(135deg,#06b6d4,#10b981)">DP</div>
-              <div class="cs-review-info">
-                <div class="cs-review-name">Dr. Priya Nair</div>
-                <div class="cs-review-role"></div>
-              </div>
-              <div class="cs-review-stat">
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 06 EdTech -->
-    <div class="cs-panel" style="--accent:#16a34a; --accent-dim:rgba(168,85,247,0.12);">
-      <div class="cs-panel-inner">
-        <div class="cs-panel-left">
-          <span class="cs-panel-tag">EdTech &nbsp;·&nbsp; 06</span>
-          <h3 class="cs-panel-title">LearnSphere EdTech Platform.</h3>
-          <p class="cs-panel-desc">Adaptive learning platform powered by AI that personalizes course content, tracks mastery progress, and accurately predicts student learning outcomes.</p>
-          <div class="cs-panel-tags"><span>Next.js</span><span>Python</span><span>AWS</span><span>OpenAI</span></div>
-          <a href="#contact" class="cs-panel-cta">View Case Study &#8599;</a>
-        </div>
-        <div class="cs-panel-right">
-          <div class="cs-review-card" style="--rc-bg:linear-gradient(145deg,#180a20,#0e0820); --rc-glow:rgba(168,85,247,0.18); --rc-border:rgba(168,85,247,0.25); --rc-accent:#d8b4fe;">
-            <div class="cs-review-top">
-              <div class="cs-review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-              <div class="cs-review-verified">Verified Client</div>
-            </div>
-            <div class="cs-review-quote-wrap">
-              <span class="cs-review-openquote">"</span>
-              <p class="cs-review-text">LearnSphere's adaptive engine is remarkable. Student completion rates jumped from 34% to 81% in one semester. With 200k learners active, the platform has never once gone down.</p>
-            </div>
-            <div class="cs-review-divider"></div>
-            <div class="cs-review-author">
-              <div class="cs-review-avatar" style="background:linear-gradient(135deg,#a855f7,#ec4899)">TW</div>
-              <div class="cs-review-info">
-                <div class="cs-review-name">Thomas Weller</div>
-                <div class="cs-review-role"></div>
-              </div>
-              <div class="cs-review-stat">
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /cs-stack -->
-</section>
-
 <!-- WHY US -->
 <section id="why" class="section mesh-bg">
   <div class="container">
@@ -534,12 +397,24 @@
       <p class="section-sub reveal reveal-delay-2">We are not just a dev shop. We are your technology partner, invested in your success.</p>
     </div>
     <div class="why-grid">
-      <div class="why-card reveal"><div class="why-num">01</div><div class="why-icon">&#9889;</div><div class="why-title">Cutting-Edge Technologies</div><div class="why-desc">We stay at the frontier of modern tech. Our engineers constantly upskill to deliver solutions using the latest, most effective tools available.</div></div>
-      <div class="why-card reveal reveal-delay-1"><div class="why-num">02</div><div class="why-icon">&#127959;&#65039;</div><div class="why-title">Scalable Architecture</div><div class="why-desc">Every system we build is architected to grow with you &mdash; from 100 users to 10 million, without costly rewrites or downtime.</div></div>
-      <div class="why-card reveal reveal-delay-2"><div class="why-num">03</div><div class="why-icon">&#128640;</div><div class="why-title">Fast Development Cycles</div><div class="why-desc">Agile sprints, CI/CD pipelines, and a bias for action means you see working software in weeks, not months.</div></div>
-      <div class="why-card reveal"><div class="why-num">04</div><div class="why-icon">&#129504;</div><div class="why-title">Experienced Engineers</div><div class="why-desc">Our team has shipped products used by millions. Senior-led execution with deep expertise across the full stack and domains.</div></div>
-      <div class="why-card reveal reveal-delay-1"><div class="why-num">05</div><div class="why-icon">&#127807;</div><div class="why-title">Startup-Friendly Approach</div><div class="why-desc">We understand lean budgets, tight timelines, and the need to pivot. Flexible engagement models that fit where you are right now.</div></div>
-      <div class="why-card reveal reveal-delay-2"><div class="why-num">06</div><div class="why-icon">&#128274;</div><div class="why-title">Security &amp; Compliance</div><div class="why-desc">Security-first development practices with GDPR, HIPAA, and SOC2-ready implementations for peace of mind.</div></div>
+      <div class="why-card reveal"><div class="why-num">01</div><div class="why-icon">
+        <i class="fas fa-microchip" style="color: #059669; font-size: 28px;"></i>
+      </div><div class="why-title">Cutting-Edge Technologies</div><div class="why-desc">We stay at the frontier of modern tech. Our engineers constantly upskill to deliver solutions using the latest, most effective tools available.</div></div>
+      <div class="why-card reveal reveal-delay-1"><div class="why-num">02</div><div class="why-icon">
+        <i class="fas fa-layer-group" style="color: #0891b2; font-size: 28px;"></i>
+      </div><div class="why-title">Scalable Architecture</div><div class="why-desc">Every system we build is architected to grow with you &mdash; from 100 users to 10 million, without costly rewrites or downtime.</div></div>
+      <div class="why-card reveal reveal-delay-2"><div class="why-num">03</div><div class="why-icon">
+        <i class="fas fa-rocket" style="color: #dc2626; font-size: 28px;"></i>
+      </div><div class="why-title">Fast Development Cycles</div><div class="why-desc">Agile sprints, CI/CD pipelines, and a bias for action means you see working software in weeks, not months.</div></div>
+      <div class="why-card reveal"><div class="why-num">04</div><div class="why-icon">
+        <i class="fas fa-user-graduate" style="color: #7c3aed; font-size: 28px;"></i>
+      </div><div class="why-title">Experienced Engineers</div><div class="why-desc">Our team has shipped products used by millions. Senior-led execution with deep expertise across the full stack and domains.</div></div>
+      <div class="why-card reveal reveal-delay-1"><div class="why-num">05</div><div class="why-icon">
+        <i class="fas fa-lightbulb" style="color: #ea580c; font-size: 28px;"></i>
+      </div><div class="why-title">Startup-Friendly Approach</div><div class="why-desc">We understand lean budgets, tight timelines, and the need to pivot. Flexible engagement models that fit where you are right now.</div></div>
+      <div class="why-card reveal reveal-delay-2"><div class="why-num">06</div><div class="why-icon">
+        <i class="fas fa-shield-alt" style="color: #0284c7; font-size: 28px;"></i>
+      </div><div class="why-title">Security &amp; Compliance</div><div class="why-desc">Security-first development practices with GDPR, HIPAA, and SOC2-ready implementations for peace of mind.</div></div>
     </div>
   </div>
 </section>
@@ -558,17 +433,23 @@
   <div class="trow-wrap">
     <div class="trow trow-left">
       <!-- set A -->
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Aikron transformed our vague concept into a polished, production-ready AI platform in under 3 months. Their technical depth is unmatched they consistently surprised us.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#166534,#4ade80)">AR</div><div><div class="tc-name">Arjun Reddy <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">We launched our Flutter app on iOS and Android simultaneously, on time and on budget. The UX quality blew our initial designs out of the water. Aikron doesn't just build  they elevate.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#a3e635)">SK</div><div><div class="tc-name">Sarah Kim <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Our SaaS platform went from MVP to serving 10,000+ enterprise users with zero major incidents. The architecture they designed scaled perfectly. I wouldn't trust another team.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#14532d,#22c55e)">MJ</div><div><div class="tc-name">Marcus Johnson <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The ML integration Aikron built reduced our operational costs by 34% in Q1. The ROI was immediate and the implementation was seamless exceeded every expectation we had.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#166534)">LP</div><div><div class="tc-name">Linh Pham <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Working with Aikron feels like having a world-class CTO embedded in your team. They ask the right questions, challenge assumptions, and deliver genuinely elegant solutions.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#22c55e,#4ade80)">TC</div><div><div class="tc-name">Thomas Chen <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">ItsLinked.in is exactly what we envisioned - a platform where anyone can share and explore diverse content with easy management, blogging, and news features. Delivered as expected and on time.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#166534,#4ade80)">HS</div><div><div class="tc-name">Harsha Srinivas<span class="tc-badge">✓</span></div><div class="tc-role">Product Manager, ItsLinked.in</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Sweet Treat Cafe came to life beautifully. Aesthetic designs and extraordinary animations created the perfect ordering site for our international client. The cafe menu, ideas, and all elements exceeded our vision. Made aesthetically, and given time and worked hard as per my view and vision.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#a3e635)">JS</div><div><div class="tc-name">John Santhanan<span class="tc-badge">✓</span></div><div class="tc-role">Founder, SweetTreat</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The Vision Assistant Device exceeded all requirements. 65g weight, 2-4 second latency, cost-efficient with DL model integration. Made as per requirement and prediction and integrations and 3D design of specs are awesome.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#14532d,#22c55e)">SK</div><div><div class="tc-name">Subash Kumar<span class="tc-badge">✓</span></div><div class="tc-role">Manager, Alt Eye</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The mobile app for a hub for all types of services - food, shopping, bike & car, all - was made perfectly as I wanted. Delivered in time and as accepted & budget expected. Perfect MVP development.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#166534)">DG</div><div><div class="tc-name">Devansh Gowda<span class="tc-badge">✓</span></div><div class="tc-role">Business Head</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">A user-friendly food delivery mobile application designed to simplify the ordering experience. Seamless, intuitive interface that allows users to browse restaurants, explore menus, and place orders with minimal effort. Made as per regional development.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#22c55e,#4ade80)">AS</div><div><div class="tc-name">Aakash Singh<span class="tc-badge">✓</span></div><div class="tc-role">Owner</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">FSMS (Faculty & Student Management) system for SDM College - an ML based management system where auto-scales the clouds and perfect management system for college to maintain records and all perfectly, smooth. Accurate Things as we designed & planned was Developed By Aikron Team, their response was amazing and cool.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#14532d,#22c55e)">GR</div><div><div class="tc-name">Geetha Ramesh<span class="tc-badge">✓</span></div><div class="tc-role">Administrator, SDM College</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The real estate portal they built transformed our business completely. Property listings, virtual tours, and client management system work seamlessly. Our conversion rate increased by 120% within the first quarter.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#b45309,#f59e0b)">RK</div><div><div class="tc-name">Rahul Kumar<span class="tc-badge">✓</span></div><div class="tc-role">CEO, PropertyHub</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Our fintech payment gateway is now processing millions of transactions daily. The secure architecture and fraud detection system they implemented exceeded industry standards. Absolutely reliable and scalable.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#0369a1,#38bdf8)">AP</div><div><div class="tc-name">Anita Patel<span class="tc-badge">✓</span></div><div class="tc-role">CTO, PaySecure</div></div></div></div>
       <!-- set B (duplicate for seamless loop) -->
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Aikron transformed our vague concept into a polished, production-ready AI platform in under 3 months. Their technical depth is unmatched they consistently surprised us.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#166534,#4ade80)">AR</div><div><div class="tc-name">Arjun Reddy <span class="tc-badge">✓</span></div><div class="tc-role">.</div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">We launched our Flutter app on iOS and Android simultaneously, on time and on budget. The UX quality blew our initial designs out of the water. Aikron doesn't just build they elevate.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#a3e635)">SK</div><div><div class="tc-name">Sarah Kim <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Our SaaS platform went from MVP to serving 10,000+ enterprise users with zero major incidents. The architecture they designed scaled perfectly. I wouldn't trust another team.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#14532d,#22c55e)">MJ</div><div><div class="tc-name">Marcus Johnson <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The ML integration Aikron built reduced our operational costs by 34% in Q1. The ROI was immediate and the implementation was seamless exceeded every expectation we had.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#166534)">LP</div><div><div class="tc-name">Linh Pham <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Working with Aikron feels like having a world-class CTO embedded in your team. They ask the right questions, challenge assumptions, and deliver genuinely elegant solutions.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#22c55e,#4ade80)">TC</div><div><div class="tc-name">Thomas Chen <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">ItsLinked.in is exactly what we envisioned - a platform where anyone can share and explore diverse content with easy management, blogging, and news features. Delivered as expected and on time.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#166534,#4ade80)">HS</div><div><div class="tc-name">Harsha Srinivas<span class="tc-badge">✓</span></div><div class="tc-role">Product Manager, ItsLinked.in</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Sweet Treat Cafe came to life beautifully. Aesthetic designs and extraordinary animations created the perfect ordering site for our international client. The cafe menu, ideas, and all elements exceeded our vision. Made aesthetically, and given time and worked hard as per my view and vision.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#a3e635)">JS</div><div><div class="tc-name">John Santhanan<span class="tc-badge">✓</span></div><div class="tc-role">Founder, SweetTreat</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The Vision Assistant Device exceeded all requirements. 65g weight, 2-4 second latency, cost-efficient with DL model integration. Made as per requirement and prediction and integrations and 3D design of specs are awesome.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#14532d,#22c55e)">SK</div><div><div class="tc-name">Subash Kumar<span class="tc-badge">✓</span></div><div class="tc-role">Manager, Alt Eye</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The mobile app for a hub for all types of services - food, shopping, bike & car, all - was made perfectly as I wanted. Delivered in time and as accepted & budget expected. Perfect MVP development.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#166534)">DG</div><div><div class="tc-name">Devansh Gowda<span class="tc-badge">✓</span></div><div class="tc-role">Business Head</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">A user-friendly food delivery mobile application designed to simplify the ordering experience. Seamless, intuitive interface that allows users to browse restaurants, explore menus, and place orders with minimal effort. Made as per regional development.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#22c55e,#4ade80)">AS</div><div><div class="tc-name">Aakash Singh<span class="tc-badge">✓</span></div><div class="tc-role">Owner</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">FSMS (Faculty & Student Management) system for SDM College - an ML based management system where auto-scales the clouds and perfect management system for college to maintain records and all perfectly, smooth. Accurate Things as we designed & planned was Developed By Aikron Team, their response was amazing and cool.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#14532d,#22c55e)">GR</div><div><div class="tc-name">Geetha Ramesh<span class="tc-badge">✓</span></div><div class="tc-role">Administrator, SDM College</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The real estate portal they built transformed our business completely. Property listings, virtual tours, and client management system work seamlessly. Our conversion rate increased by 120% within the first quarter.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#b45309,#f59e0b)">RK</div><div><div class="tc-name">Rahul Kumar<span class="tc-badge">✓</span></div><div class="tc-role">CEO, PropertyHub</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Our fintech payment gateway is now processing millions of transactions daily. The secure architecture and fraud detection system they implemented exceeded industry standards. Absolutely reliable and scalable.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#0369a1,#38bdf8)">AP</div><div><div class="tc-name">Anita Patel<span class="tc-badge">✓</span></div><div class="tc-role">CTO, PaySecure</div></div></div></div>
     </div>
   </div>
 
@@ -576,17 +457,23 @@
   <div class="trow-wrap">
     <div class="trow trow-right">
       <!-- set A -->
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">We needed a startup-friendly team who could move fast without breaking things. Aikron delivered our e-commerce MVP in 8 weeks, and we raised a Series A three months later.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#a3e635,#4ade80)">FO</div><div><div class="tc-name">Fatima Ouali <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The React dashboard they built is lightning fast and incredibly intuitive. Users love it our NPS jumped 22 points after launch. Exceptional frontend engineering from start to finish.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#0e7490,#06b6d4)">DK</div><div><div class="tc-name">Dev Kapoor <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Our mobile app had terrible ratings before Aikron rebuilt it. Three months after relaunch we hit 4.8 stars on both stores with a 60% improvement in daily active users.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">NR</div><div><div class="tc-name">Nadia Rais <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Aikron's team is genuinely rare. They bring enterprise-level discipline to startup-speed execution. We've shipped three major product lines with them and every single one has exceeded KPIs.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#b45309,#f59e0b)">JW</div><div><div class="tc-name">James Wu <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The Java backend they built handles 2M+ daily transactions without a single downtime incident in 14 months. That kind of reliability is priceless when you're in the payments space.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#0369a1,#38bdf8)">PM</div><div><div class="tc-name">Priya Mehta <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">ItsLinked.in is exactly what we envisioned - a platform where anyone can share and explore diverse content with easy management, blogging, and news features. Delivered as expected and on time.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#166534,#4ade80)">HS</div><div><div class="tc-name">Harsha Srinivas<span class="tc-badge">✓</span></div><div class="tc-role">Product Manager, ItsLinked.in</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Sweet Treat Cafe came to life beautifully. Aesthetic designs and extraordinary animations created the perfect ordering site for our international client. The cafe menu, ideas, and all elements exceeded our vision. Made aesthetically, and given time and worked hard as per my view and vision.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#a3e635)">JS</div><div><div class="tc-name">John Santhanan<span class="tc-badge">✓</span></div><div class="tc-role">Founder, SweetTreat</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The Vision Assistant Device exceeded all requirements. 65g weight, 2-4 second latency, cost-efficient with DL model integration. Made as per requirement and prediction and integrations and 3D design of specs are awesome.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#14532d,#22c55e)">SK</div><div><div class="tc-name">Subash Kumar<span class="tc-badge">✓</span></div><div class="tc-role">Manager, Alt Eye</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The mobile app for a hub for all types of services - food, shopping, bike & car, all - was made perfectly as I wanted. Delivered in time and as accepted & budget expected. Perfect MVP development.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#166534)">DG</div><div><div class="tc-name">Devansh Gowda<span class="tc-badge">✓</span></div><div class="tc-role">Business Head</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">A user-friendly food delivery mobile application designed to simplify the ordering experience. Seamless, intuitive interface that allows users to browse restaurants, explore menus, and place orders with minimal effort. Made as per regional development.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#22c55e,#4ade80)">AS</div><div><div class="tc-name">Aakash Singh<span class="tc-badge">✓</span></div><div class="tc-role">Owner</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">FSMS (Faculty & Student Management) system for SDM College - an ML based management system where auto-scales the clouds and perfect management system for college to maintain records and all perfectly, smooth. Accurate Things as we designed & planned was Developed By Aikron Team, their response was amazing and cool.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#14532d,#22c55e)">GR</div><div><div class="tc-name">Geetha Ramesh<span class="tc-badge">✓</span></div><div class="tc-role">Administrator, SDM College</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The real estate portal they built transformed our business completely. Property listings, virtual tours, and client management system work seamlessly. Our conversion rate increased by 120% within the first quarter.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#b45309,#f59e0b)">RK</div><div><div class="tc-name">Rahul Kumar<span class="tc-badge">✓</span></div><div class="tc-role">CEO, PropertyHub</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Our fintech payment gateway is now processing millions of transactions daily. The secure architecture and fraud detection system they implemented exceeded industry standards. Absolutely reliable and scalable.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#0369a1,#38bdf8)">AP</div><div><div class="tc-name">Anita Patel<span class="tc-badge">✓</span></div><div class="tc-role">CTO, PaySecure</div></div></div></div>
       <!-- set B (duplicate) -->
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">We needed a startup-friendly team who could move fast without breaking things. Aikron delivered our e-commerce MVP in 8 weeks, and we raised a Series A three months later.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#a3e635,#4ade80)">FO</div><div><div class="tc-name">Fatima Ouali <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The React dashboard they built is lightning fast and incredibly intuitive. Users love it our NPS jumped 22 points after launch. Exceptional frontend engineering from start to finish.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#0e7490,#06b6d4)">DK</div><div><div class="tc-name">Dev Kapoor <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Our mobile app had terrible ratings before Aikron rebuilt it. Three months after relaunch we hit 4.8 stars on both stores with a 60% improvement in daily active users.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">NR</div><div><div class="tc-name">Nadia Rais <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Aikron's team is genuinely rare. They bring enterprise-level discipline to startup-speed execution. We've shipped three major product lines with them and every single one has exceeded KPIs.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#b45309,#f59e0b)">JW</div><div><div class="tc-name">James Wu <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
-      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The Java backend they built handles 2M+ daily transactions without a single downtime incident in 14 months. That kind of reliability is priceless when you're in the payments space.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#0369a1,#38bdf8)">PM</div><div><div class="tc-name">Priya Mehta <span class="tc-badge">✓</span></div><div class="tc-role"></div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">ItsLinked.in is exactly what we envisioned - a platform where anyone can share and explore diverse content with easy management, blogging, and news features. Delivered as expected and on time.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#166534,#4ade80)">HS</div><div><div class="tc-name">Harsha Srinivas<span class="tc-badge">✓</span></div><div class="tc-role">Product Manager, ItsLinked.in</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Sweet Treat Cafe came to life beautifully. Aesthetic designs and extraordinary animations created the perfect ordering site for our international client. The cafe menu, ideas, and all elements exceeded our vision. Made aesthetically, and given time and worked hard as per my view and vision.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#a3e635)">JS</div><div><div class="tc-name">John Santhanan<span class="tc-badge">✓</span></div><div class="tc-role">Founder, SweetTreat</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The Vision Assistant Device exceeded all requirements. 65g weight, 2-4 second latency, cost-efficient with DL model integration. Made as per requirement and prediction and integrations and 3D design of specs are awesome.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#14532d,#22c55e)">SK</div><div><div class="tc-name">Subash Kumar<span class="tc-badge">✓</span></div><div class="tc-role">Manager, Alt Eye</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The mobile app for a hub for all types of services - food, shopping, bike & car, all - was made perfectly as I wanted. Delivered in time and as accepted & budget expected. Perfect MVP development.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#4ade80,#166534)">DG</div><div><div class="tc-name">Devansh Gowda<span class="tc-badge">✓</span></div><div class="tc-role">Business Head</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">A user-friendly food delivery mobile application designed to simplify the ordering experience. Seamless, intuitive interface that allows users to browse restaurants, explore menus, and place orders with minimal effort. Made as per regional development.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#22c55e,#4ade80)">AS</div><div><div class="tc-name">Aakash Singh<span class="tc-badge">✓</span></div><div class="tc-role">Owner</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">FSMS (Faculty & Student Management) system for SDM College - an ML based management system where auto-scales the clouds and perfect management system for college to maintain records and all perfectly, smooth. Accurate Things as we designed & planned was Developed By Aikron Team, their response was amazing and cool.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#14532d,#22c55e)">GR</div><div><div class="tc-name">Geetha Ramesh<span class="tc-badge">✓</span></div><div class="tc-role">Administrator, SDM College</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">The real estate portal they built transformed our business completely. Property listings, virtual tours, and client management system work seamlessly. Our conversion rate increased by 120% within the first quarter.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#b45309,#f59e0b)">RK</div><div><div class="tc-name">Rahul Kumar<span class="tc-badge">✓</span></div><div class="tc-role">CEO, PropertyHub</div></div></div></div>
+      <div class="tc"><div class="tc-q">"</div><p class="tc-text">Our fintech payment gateway is now processing millions of transactions daily. The secure architecture and fraud detection system they implemented exceeded industry standards. Absolutely reliable and scalable.</p><div class="tc-foot"><div class="tc-av" style="background:linear-gradient(135deg,#0369a1,#38bdf8)">AP</div><div><div class="tc-name">Anita Patel<span class="tc-badge">✓</span></div><div class="tc-role">CTO, PaySecure</div></div></div></div>
     </div>
   </div>
 
@@ -600,7 +487,6 @@
     <p class="cta-sub reveal reveal-delay-2">Whether you're a startup with a concept or an enterprise seeking transformation, we're ready to build something extraordinary together.</p>
     <div class="cta-btns reveal reveal-delay-3">
      
-      <a href="#portfolio" class="btn btn-outline" style="font-size:16px;padding:16px 32px;">Explore Our Work</a>
     </div>
   </div>
 </section>
@@ -618,10 +504,10 @@
         <div class="contact-info-title">We'd Love to <span class="grad-text">Hear from You</span></div>
         <p class="contact-info-sub">Whether you have a fully scoped project or just an idea you want to explore, our team is ready to listen, advise, and partner with you.</p>
         <div class="contact-links">
-          <a class="contact-link" href="/cdn-cgi/l/email-protection#f89b97968c999b8cb8999193978a96d68c9d9b90"><div class="contact-link-icon" style="background:rgba(74,222,128,0.1)">&#9993;&#65039;</div><div><div class="contact-link-label">Email Us</div><div class="contact-link-text"><span class="__cf_email__" data-cfemail="85ede0e9e9eac5e4eceeeaf7ebabecea">contact@aikorn.tech</span></div></div></a>
-          <a class="contact-link" href="tel:+918897944971"><div class="contact-link-icon" style="background:rgba(74,222,128,0.12)">&#128222;</div><div><div class="contact-link-label">Call Us</div><div class="contact-link-text">+91 8897944971</div></div></a>
-          <a class="contact-link" href="#"><div class="contact-link-icon" style="background:rgba(163,230,53,0.1)">&#128205;</div><div><div class="contact-link-label">Office</div><div class="contact-link-text">Hyderabad, Telangana &amp; Remote Worldwide</div></div></a>
-          <a class="contact-link" href="#"><div class="contact-link-icon" style="background:rgba(74,222,128,0.08)">&#128279;</div><div><div class="contact-link-label">LinkedIn</div><div class="contact-link-text">linkedin.com/company/aikorn</div></div></a>
+          <a class="contact-link" href="/cdn-cgi/l/email-protection#f89b97968c999b8cb8999193978a96d68c9d9b90" target="_blank" rel="noopener noreferrer"><div class="contact-link-icon" style="background:rgba(74,222,128,0.1)">&#9993;&#65039;</div><div><div class="contact-link-label">Email Us</div><div class="contact-link-text"><span class="__cf_email__" data-cfemail="85ede0e9e9eac5e4eceeeaf7ebabecea">contact@aikorn.tech</span></div></div></a>
+          <a class="contact-link" href="tel:+918897944971" target="_blank" rel="noopener noreferrer"><div class="contact-link-icon" style="background:rgba(74,222,128,0.12)">&#128222;</div><div><div class="contact-link-label">Call Us</div><div class="contact-link-text">+91 8897944971</div></div></a>
+          <a class="contact-link" href="#" target="_blank" rel="noopener noreferrer"><div class="contact-link-icon" style="background:rgba(163,230,53,0.1)">&#128205;</div><div><div class="contact-link-label">Office</div><div class="contact-link-text">Hyderabad, Telangana &amp; Remote Worldwide</div></div></a>
+          <a class="contact-link" href="#" target="_blank" rel="noopener noreferrer"><div class="contact-link-icon" style="background:rgba(74,222,128,0.08)">&#128279;</div><div><div class="contact-link-label">LinkedIn</div><div class="contact-link-text">linkedin.com/company/aikorn</div></div></a>
         </div>
       </div>
       <div class="reveal reveal-delay-2">
@@ -672,28 +558,35 @@
     <div class="ft-hero-row ft-reveal">
       <div class="ft-hero-left">
         <div class="ft-logo-wrap">
-          <span class="ft-logo"><img src="final logo main .svg" alt="Aikron" style="height: 32px; width: auto;"></span>
-          <span class="ft-logo-badge">EST. 2020</span>
+          <span class="ft-logo"><img src="Group 1000002819.svg" alt="Aikron" style="height: 32px; width: auto;"></span>
         </div>
         <p class="ft-hero-statement">We turn ambitious ideas into&nbsp;<em>world-class digital&nbsp;products.</em></p>
         <div class="ft-avail">
           <span class="ft-avail-dot"></span>
-          <span>Available for new projects in Q3 2025</span>
+          <span>Available for new projects </span>
         </div>
         <div class="ft-socials">
-          <a class="ft-social" href="#" title="Twitter / X" aria-label="Twitter">
+          <a class="ft-social" href="https://x.com/AikronT8346" title="Twitter / X" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.261 5.635L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/></svg>
           </a>
-          <a class="ft-social" href="#" title="LinkedIn" aria-label="LinkedIn">
+          <a class="ft-social" href="https://www.linkedin.com/company/aikron-tech/posts/?feedView=all" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2V9zm2-6a2 2 0 110 4 2 2 0 010-4z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a class="ft-social" href="#" title="GitHub" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill="currentColor"/></svg>
+          <a class="ft-social" href="https://www.reddit.com/user/Due-Conversation2769/" title="Reddit" aria-label="Reddit" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8" fill="none"/>
+              <circle cx="8" cy="13" r="1.5" fill="currentColor"/>
+              <circle cx="16" cy="13" r="1.5" fill="currentColor"/>
+              <path d="M8 11c0-1 2-2 4-2s4 1 4 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M7 16s1 2 5 2 5-2 5-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
           </a>
-          <a class="ft-social" href="#" title="Discord" aria-label="Discord">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z" fill="currentColor"/></svg>
+          <a class="ft-social" href="https://discord.gg/pM8rmXwK" title="Discord" aria-label="Discord" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515a.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0a12.64 12.64 0 00-.617-1.25a.077.077 0 00-.079-.037A19.736 19.736 0 004.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.032.057a19.9 19.9 0 005.993 3.03a.078.078 0 00.084-.028a14.09 14.09 0 001.226-1.994a.076.076 0 00-.041-.106a13.107 13.107 0 01-1.872-.892a.077.077 0 01-.008-.128a10.2 10.2 0 00.372-.292a.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127a12.299 12.299 0 01-1.873.892a.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028a19.839 19.839 0 006.002-3.03a.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z" fill="currentColor"/>
+            </svg>
           </a>
-          <a class="ft-social" href="#" title="Instagram" aria-label="Instagram">
+          <a class="ft-social" href="https://www.instagram.com/aikron.tech?utm_source=qr&igshid=dXA2ajk4N2dyYm83" title="Instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
           </a>
         </div>
@@ -747,11 +640,9 @@
         <div class="ft-col-title"><span class="ft-col-icon">🏢</span> Company</div>
         <ul class="ft-links">
           <li><a href="#about"><span class="ft-link-arrow">→</span>About Us</a></li>
-          <li><a href="#portfolio"><span class="ft-link-arrow">→</span>Our Work</a></li>
           <li><a href="#process"><span class="ft-link-arrow">→</span>How We Work</a></li>
           <li><a href="#testimonials"><span class="ft-link-arrow">→</span>Testimonials</a></li>
           <li><a href="#contact"><span class="ft-link-arrow">→</span>Contact</a></li>
-          <li><a href="#"><span class="ft-link-arrow">→</span>Careers <span class="ft-hiring-tag">Hiring</span></a></li>
         </ul>
       </div>
       <div class="ft-col">
@@ -775,16 +666,8 @@
     </div>
 
     <div class="ft-bottom">
-      <div class="ft-bottom-left">
-        <span class="ft-copy">&copy; 2025 Aikron. All rights reserved.</span>
-        <span class="ft-made-with">Crafted with <span class="ft-heart">♥</span> by the Aikron team</span>
-      </div>
-      <div class="ft-bottom-right">
-        <a href="#">Privacy Policy</a>
-        <span class="ft-sep">·</span>
-        <a href="#">Terms of Service</a>
-        <span class="ft-sep">·</span>
-        <a href="#">Sitemap</a>
+      <div class="ft-bottom-center">
+        <span class="ft-copy">&copy; 2026 Aikron. All rights reserved.</span>
       </div>
     </div>
   </div>
